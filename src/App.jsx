@@ -5,8 +5,8 @@ import { faGit } from '@fortawesome/free-brands-svg-icons'
 
 function App () {
   const itemsNav = [
-    { linkTo: 'https://www.google.com/', text: 'google', icon: faHome, modifier: 'nav' },
-    { linkTo: 'https://www.github.com/', text: 'git', icon: faGit, modifier: 'nav' }
+    { id: 1, linkTo: 'https://www.google.com/', text: 'google', icon: faHome, modifier: 'nav' },
+    { id: 2, linkTo: 'https://www.github.com/', text: 'git', icon: faGit, modifier: 'nav' }
   ]
   return (
     <>
