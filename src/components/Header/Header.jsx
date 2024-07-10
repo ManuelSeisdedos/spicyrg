@@ -1,9 +1,13 @@
 import './Header.css'
 
-function Header () {
+function Header ({ children, modifier }) {
   return (
     <>
-      <header />
+      <header className={`Header Header--${modifier}`}>
+        {children && (
+          children
+        )}
+      </header>
     </>
   )
 }

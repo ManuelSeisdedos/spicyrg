@@ -1,12 +1,12 @@
 import './LinkTo.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function LinkTo ({ linkTo, text, icon }) {
+function LinkTo ({ linkTo, text, icon, modifier }) {
   return (
     <>
-      <a href={linkTo} className='LinkTo'>
-        {icon && (<FontAwesomeIcon icon={icon} className='LinkTo-icon' />)}
-        {text && (<span className='LinkTo-text'>{text}</span>)}
+      <a href={linkTo} className={`LinkTo LinkTo--${modifier}`}>
+        {icon && (<FontAwesomeIcon icon={icon} className={`LinkTo-icon LinkTo-icon--${modifier}`} />)}
+        {text && (<span className={`LinkTo-text LinkTo-text--${modifier}`}>{text}</span>)}
       </a>
     </>
   )
