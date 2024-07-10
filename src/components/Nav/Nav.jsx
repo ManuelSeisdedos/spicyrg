@@ -2,7 +2,7 @@ import './Nav.css'
 import List from '../List/List.jsx'
 import LinkTo from '../LinkTo/LinkTo.jsx'
 
-function Nav ({ modifire, items }) {
+function Nav ({ items, modifire }) {
   return (
     <>
       <nav className={`Nav Nav--${modifire}`}>

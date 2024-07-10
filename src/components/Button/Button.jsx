@@ -1,7 +1,7 @@
 import './Button.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function Button ({ text, icon, modifier, handleClick }) {
+function Button ({ text, icon, handleClick, modifier }) {
   return (
     <>
       <button className={`Button Button--${modifier}`} onClick={handleClick}>

@@ -1,4 +1,4 @@
-import './Sidebar.css'
+import './SideBar.css'
 
 function SideBar ({ children, modifire }) {
   return (
