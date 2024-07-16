@@ -1,8 +1,7 @@
 import './Nav.css'
 import List from '../List/List.jsx'
-import LinkTo from '../LinkTo/LinkTo.jsx'
 
-function Nav ({ items, modifire }) {
+function Nav ({ children, items, modifire }) {
   return (
     <>
       <nav className={`Nav Nav--${modifire}`}>
@@ -11,7 +10,7 @@ function Nav ({ items, modifire }) {
           items={items}
           modifire='nav'
         >
-          <LinkTo />
+          {children && (children)}
         </List>
       </nav>
     </>
