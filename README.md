@@ -1,10 +1,13 @@
-# React + Vite
+# Pagina Web de Spicy.rg | React + Vite
+
+## Descripción del proyecto
+
+En este proyecto se desarrollará una página web con React para promocionar el trabajo de un DJ. Esta página incluira sets, eventos, galeria de fotos e información de contacto del artista.
 
 ## Estilos
 
-Se implementa **BEM** ({B}lock - {E}lement - {M}odifire) con **SuitCSS** para el nombramiento de las clases.
+Se implementa **BEM** (**{B}**lock - **{E}**lement - **{M}**odifire) con **SuitCSS** para el nombramiento de las clases.
 
-Documentación: https://dev.to/ignacio_cuadra/css-convenciones-de-nombres-bem-suit-css-y-title-css-365o
 
 ### Ejemplos
 
@@ -17,6 +20,8 @@ Documentación: https://dev.to/ignacio_cuadra/css-convenciones-de-nombres-bem-su
 - **Estado:** .Header-nav.is-open (Utiliza camelCase, se utiliza para manejar estados de un componente o un elemento).
 
 - **Utilidades:** .u-block { display: block} (Utiliza camelCase, empiezan con la letra u y separado por un guion el nombre de la utilidad).
+
+- **Documentación:** https://dev.to/ignacio_cuadra/css-convenciones-de-nombres-bem-suit-css-y-title-css-365o
 
 ## Componentes
 
