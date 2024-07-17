@@ -1,5 +1,6 @@
 import './List.css'
-import { cloneElement, useState } from 'react'
+import { useState } from 'react'
+import { mapItems } from '../../utils/mapItems'
 
 function List ({ children, isOrderedInitialization, title, items, modifire }) {
   const [isOrdered] = useState(isOrderedInitialization)
@@ -11,22 +12,14 @@ function List ({ children, isOrderedInitialization, title, items, modifire }) {
         ? (
           <ol className={`List List--${modifire}`}>
             {items && (
-              items.map((item) => (
-                <li className={`List-item List-item--${modifire}`} key={item.id}>
-                  {children && cloneElement(children, { ...item }/* Spread Operator */)}
-                </li>
-              ))
+              mapItems(children, items, `List-item List-item--${modifire}`)
             )}
           </ol>
           )
         : (
           <ul className={`List List--${modifire}`}>
             {items && (
-              items.map((item) => (
-                <li className={`List-item List-item--${modifire}`} key={item.id}>
-                  {children && cloneElement(children, { ...item }/* Spread Operator */)}
-                </li>
-              ))
+              mapItems(children, items, `List-item List-item--${modifire}`)
             )}
           </ul>
           )}
