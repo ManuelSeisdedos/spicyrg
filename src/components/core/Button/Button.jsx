@@ -1,11 +1,12 @@
 import './Button.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function Button ({ text, icon, handleClick, modifire }) {
+function Button ({ text, icon, svg, handleClick, modifire }) {
   return (
     <>
       <button className={`Button Button--${modifire}`} onClick={handleClick}>
         {icon && (<FontAwesomeIcon icon={icon} className={`Button-icon Button-icon--${modifire}`} />)}
+        {svg && (<img src={svg} alt='' className={`Button-svg Button-svg--${modifire}`} />)}
         {text && (<span className={`Button-text Button-text--${modifire}`}>{text}</span>)}
       </button>
     </>

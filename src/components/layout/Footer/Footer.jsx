@@ -1,7 +1,7 @@
 import './Footer.css'
-import { footerLists } from '../../consts/footerLists.js'
-import List from '../List/List.jsx'
-import LinkTo from '../LinkTo/LinkTo.jsx'
+import { footerLists } from '../../../consts/footerLists.js'
+import List from '../../integrated/List/List.jsx'
+import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 
 function Footer ({ children, modifier }) {
   return (

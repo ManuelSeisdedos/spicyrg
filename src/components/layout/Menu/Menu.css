@@ -1,0 +1,46 @@
+.Menu {
+    font-family: 'Roboto-Bold';
+    font-size: 1rem;
+}
+.Menu-container {
+    display: grid;
+    grid-template-columns: 11.5rem auto;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000031;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 250ms ease;
+}
+.Menu-container.is-open {
+    opacity: 1;
+	visibility: visible;
+}
+.Menu-sideBar {
+	position: relative;
+    width: 100%;
+	max-width: 11.5rem;
+	height: 100vh;
+    background-color: #1B1D1C;
+	transition: all 250ms ease;
+	transform: translateX(-100%);
+}
+.Menu-sideBar.is-open {
+    transform: translateX(0%);
+}
+.Menu-cancelSideBar {
+    position: relative;
+    width: 100%;
+    max-width: auto;
+	height: 100vh;
+    background-color: transparent;
+}
+.Menu-contact {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #fff;
+}

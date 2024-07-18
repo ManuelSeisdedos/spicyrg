@@ -1,0 +1,13 @@
+.Button {
+    background-color: transparent;
+    border: none;
+}
+.Button--menuBntClose {
+    position: absolute;
+	top: 1rem;
+	right: 1rem;
+    width: 24px;
+    height: 24px;
+	cursor: pointer;
+    transition: all 250ms ease;
+}
