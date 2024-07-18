@@ -1,6 +1,7 @@
 import './App.css'
-import Menu from './components/layout/Menu/Menu.jsx'
 import Header from './components/layout/Header/Header.jsx'
+import Menu from './components/layout/Menu/Menu.jsx'
+import About from './components/layout/About/About.jsx'
 
 function App () {
   return (
@@ -8,6 +9,9 @@ function App () {
       <Header>
         <Menu />
       </Header>
+      <main className='Main'>
+        <About />
+      </main>
     </>
   )
 }

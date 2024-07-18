@@ -20,7 +20,7 @@
 	visibility: visible;
 }
 .Menu-sideBar {
-	position: relative;
+	position: fixed;
     width: 100%;
 	max-width: 11.5rem;
 	height: 100vh;
@@ -32,7 +32,7 @@
     transform: translateX(0%);
 }
 .Menu-cancelSideBar {
-    position: relative;
+    position: fixed;
     width: 100%;
     max-width: auto;
 	height: 100vh;
@@ -42,5 +42,4 @@
     position: absolute;
     bottom: 1rem;
     right: 1rem;
-    background-color: #fff;
 }

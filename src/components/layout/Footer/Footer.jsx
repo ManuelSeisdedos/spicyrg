@@ -1,5 +1,5 @@
 import './Footer.css'
-import { footerLists } from '../../../consts/footerLists.js'
+import { contactItems } from '../../../consts/contactItems.js'
 import List from '../../integrated/List/List.jsx'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 
@@ -11,8 +11,8 @@ function Footer ({ children, modifier }) {
           children
         )}
         {
-          footerLists && (
-            footerLists.map((list) => (
+          contactItems && (
+            contactItems.map((list) => (
               <div className={`Footer-list Footer-list--${modifier}`} key={list.id}>
                 <List
                   isOrderedInitialization={false}

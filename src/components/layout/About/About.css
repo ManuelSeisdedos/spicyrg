@@ -1,0 +1,44 @@
+.About {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    justify-items: center;
+    background-image: url('src/assets/img/mobile/Principal.webp');
+    background-size: cover;
+    height: 100vh; /*690px*/
+}
+.About-logoAndText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Logo {
+    width: 20rem;
+    margin-bottom: 1rem;
+}
+.About-p {
+    width: 210px;
+    font-family: 'Roboto-Light';
+    font-size: 1rem;
+    text-align: center;
+    color: #86edff;
+}
+.About-linkToEvents {
+    margin-top: -8rem;
+}
+.LinkTo--about {
+    align-self: end;
+    font-family: 'Roboto-Bold';
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    color: #1B1D1C;
+    background-color: #C4C393;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    transition: all 250ms ease;
+}
+.LinkTo--about:hover {
+    color: #fff;
+}
