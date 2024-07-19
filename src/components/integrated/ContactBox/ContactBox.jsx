@@ -5,7 +5,7 @@ function ContactBox () {
   return (
     <>
       <div className='ContactBox'>
-        <h3 className='ContactBox-title'>CONTACTO</h3>
+        <h4 className='ContactBox-title'>CONTACTO</h4>
         <form className='ContactBox-form' action='' method='POST'>
           <div className='ContactBox-inputs'>
             <input className='ContactBox-input' type='text' name='name' id='name' placeholder='Nombre Completo' required />

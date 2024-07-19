@@ -2,12 +2,11 @@ import './List.css'
 import { useState } from 'react'
 import { mapItems } from '../../../utils/mapItems.jsx'
 
-function List ({ children, isOrderedInitialization, title, items, modifire }) {
+function List ({ children, isOrderedInitialization, items, modifire }) {
   const [isOrdered] = useState(isOrderedInitialization)
 
   return (
     <>
-      {title && (<h3>{title}</h3>)}
       {!isOrdered
         ? (
           <ul className={`UnorderedList UnorderedList--${modifire}`}>

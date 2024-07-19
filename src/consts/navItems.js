@@ -34,7 +34,6 @@ const navItems = [
     isBlankInitialization: false,
     modifire: 'sideBarNav'
   }
-
 ]
 
 export { navItems }

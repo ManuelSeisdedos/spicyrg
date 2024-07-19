@@ -1,0 +1,12 @@
+.Events {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #C4C393;
+    padding: 2rem 0;
+}
+.Events-title {
+    font-size: 45px;
+    margin-bottom: 0.5rem ;
+}
