@@ -1,31 +1,27 @@
 import './Footer.css'
-import { contactItems } from '../../../consts/contactItems.js'
-import List from '../../integrated/List/List.jsx'
+import { socialMediaItems } from '../../../consts/socialMediaItems.js'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'
+import List from '../../integrated/List/List.jsx'
+import ContactBox from '../../integrated/ContactBox/ContactBox.jsx'
 
-function Footer ({ children, modifier }) {
+function Footer () {
   return (
     <>
-      <footer className={`Footer Footer--${modifier}`}>
-        {children && (
-          children
-        )}
-        {
-          contactItems && (
-            contactItems.map((list) => (
-              <div className={`Footer-list Footer-list--${modifier}`} key={list.id}>
-                <List
-                  isOrderedInitialization={false}
-                  title={list.title}
-                  items={list.items}
-                  modifire='footer'
-                >
-                  <LinkTo />
-                </List>
-              </div>
-            ))
-          )
-        }
+      <footer className='Footer'>
+        <div className='Footer-socialMedia'>
+          {
+            socialMediaItems && (
+              <List
+                isOrderedInitialization={false}
+                items={socialMediaItems}
+                modifire='footerSocialMedia'
+              >
+                <LinkTo />
+              </List>
+            )
+          }
+        </div>
+        <ContactBox />
       </footer>
     </>
   )

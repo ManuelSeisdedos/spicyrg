@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
-const useMenu = () => {
-  const [isOpen, setIsOpen] = useState()
+const useSideBar = () => {
+  const [isOpen, setIsOpen] = useState(false)
 
   const handleClick = () => {
     setIsOpen(!isOpen)
@@ -19,4 +19,4 @@ const useMenu = () => {
   return { isOpen, handleClick }
 }
 
-export { useMenu }
+export { useSideBar }

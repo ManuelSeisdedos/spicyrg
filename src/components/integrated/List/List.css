@@ -1,8 +1,3 @@
 .OrderedList, .UnorderedList {
     list-style: none;
 }
-
-.UnorderedList--menuContact {
-    display: flex;
-    gap: 20px
-}

@@ -8,7 +8,7 @@ function Nav ({ children, items, modifire }) {
         <List
           isOrderedInitialization={false}
           items={items}
-          modifire='nav'
+          modifire={modifire}
         >
           {children && (children)}
         </List>

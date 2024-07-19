@@ -5,7 +5,7 @@ import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 function About () {
   return (
     <>
-      <div className='About'>
+      <section className='About'>
         <div className='About-logoAndText'>
           <Logo
             src='src\assets\img\Logo Spicy.svg'
@@ -28,7 +28,7 @@ function About () {
             modifire='about'
           />
         </div>
-      </div>
+      </section>
     </>
   )
 }

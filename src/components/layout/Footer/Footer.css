@@ -1,0 +1,16 @@
+.Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B1D1C;
+}
+
+.UnorderedList--footerSocialMedia {
+    display: flex;
+    gap: 1rem;
+}
+.UnorderedList-item--footerSocialMedia{
+    margin: 1rem 0;
+}
+

@@ -2,18 +2,3 @@
     background-color: transparent;
     border: none;
 }
-.Button--menuBtnOpen {
-    margin: 1rem 0 0 1rem;
-    width: 24px;
-    height: 24px;
-	cursor: pointer;
-}
-.Button--menuBntClose {
-    position: absolute;
-	top: 1rem;
-	right: 1rem;
-    width: 24px;
-    height: 24px;
-	cursor: pointer;
-
-}

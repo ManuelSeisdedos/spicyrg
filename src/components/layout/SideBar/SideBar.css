@@ -1,8 +1,8 @@
-.Menu {
+.SideBar {
     font-family: 'Roboto-Bold';
     font-size: 1rem;
 }
-.Menu-container {
+.SideBar-container {
     display: grid;
     grid-template-columns: 11.5rem auto;
     position: absolute;
@@ -15,12 +15,12 @@
 	visibility: hidden;
 	transition: all 250ms ease;
 }
-.Menu-container.is-open {
+.SideBar-container.is-open {
     opacity: 1;
 	visibility: visible;
 }
-.Menu-sideBar {
-	position: fixed;
+.SideBar-subcontainer {
+	position: relative;
     width: 100%;
 	max-width: 11.5rem;
 	height: 100vh;
@@ -28,18 +28,45 @@
 	transition: all 250ms ease;
 	transform: translateX(-100%);
 }
-.Menu-sideBar.is-open {
+.SideBar-subcontainer.is-open {
     transform: translateX(0%);
 }
-.Menu-cancelSideBar {
-    position: fixed;
+.SideBar-cancelSideBar {
+    position: relative;
     width: 100%;
     max-width: auto;
 	height: 100vh;
     background-color: transparent;
 }
-.Menu-contact {
+.SideBar-contact {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
+}
+
+.Button--sideBarBtnOpen {
+    margin: 1rem 0 0 1rem;
+    width: 24px;
+    height: 24px;
+	cursor: pointer;
+}
+.Button--sideBarBntClose {
+    position: absolute;
+	top: 1rem;
+	right: 1rem;
+    width: 24px;
+    height: 24px;
+	cursor: pointer;
+}
+
+.UnorderedList-item--sideBarNav {
+    margin: 20px 0 20px 15px;
+}
+.UnorderedList--sideBarContact {
+    display: flex;
+    gap: 20px
+}
+
+.LinkTo--sideBarNav {
+    color: #C4C393;
 }

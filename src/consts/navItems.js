@@ -4,35 +4,35 @@ const navItems = [
     linkTo: '',
     text: 'Spicy',
     isBlankInitialization: false,
-    modifire: 'sidebar'
+    modifire: 'sideBarNav'
   },
   {
     id: 2,
     linkTo: '',
     text: 'Sets',
     isBlankInitialization: false,
-    modifire: 'sidebar'
+    modifire: 'sideBarNav'
   },
   {
     id: 3,
     linkTo: '',
     text: 'Eventos',
     isBlankInitialization: false,
-    modifire: 'sidebar'
+    modifire: 'sideBarNav'
   },
   {
     id: 4,
     linkTo: '',
     text: 'Galeria',
     isBlankInitialization: false,
-    modifire: 'sidebar'
+    modifire: 'sideBarNav'
   },
   {
     id: 5,
     linkTo: '',
     text: 'Contacto',
     isBlankInitialization: false,
-    modifire: 'sidebar'
+    modifire: 'sideBarNav'
   }
 
 ]

@@ -1,4 +1,4 @@
-const contactItems = [
+const socialMediaItems = [
   {
     id: 2,
     linkTo: 'https://on.soundcloud.com/CXvnS',
@@ -15,4 +15,4 @@ const contactItems = [
   }
 ]
 
-export { contactItems }
+export { socialMediaItems }
