@@ -1,4 +1,4 @@
-.About {
+.Banner {
     display: grid;
     grid-template-rows: 1fr auto;
     align-items: center;
@@ -8,39 +8,39 @@
     width: 100%;
     height: 100dvh; /*690px*/
 }
-.About-logoAndText {
+.Banner-logoAndText {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.Logo--about { /*Desktop 500 x 240px*/
+.Logo--banner { /*Desktop 500 x 240px*/
     width: 340px;
     height: 155px;
     margin-bottom: 1rem;
 }
-.About-p {
+.Banner-p {
     width: 220px;
-    font-family: 'Roboto-Light';
+    font-family: var(--light-font);
     font-size: 1rem;
     text-align: center;
-    color: #fff;
+    color: var(--white-color);
 }
-.About-linkToEvents {
+.Banner-linkToEvents {
     margin-top: -8rem;
 }
-.LinkTo--about {
+.LinkTo--bannerLinkToEvents {
     align-self: end;
-    font-family: 'Roboto-Bold';
+    font-family: var(--bold-font);
     font-size: 20px;
     width: 200px;
     height: 50px;
-    color: #1B1D1C;
-    background-color: #C4C393;
+    color: var(--soft-black-color);
+    background-color: var(--light-mustard-color);
     padding: 0.7rem 2rem;
     border-radius: 2rem;
     transition: all 250ms ease;
 }
-.LinkTo--about:hover {
-    color: #fff;
+.LinkTo--bannerLinkToEvents:hover {
+    color: var(--white-color);
 }

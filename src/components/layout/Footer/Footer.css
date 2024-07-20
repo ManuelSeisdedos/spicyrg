@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #1B1D1C;
+    background-color: var(--soft-black-color);
 }
 
 .UnorderedList--footerSocialMedia {

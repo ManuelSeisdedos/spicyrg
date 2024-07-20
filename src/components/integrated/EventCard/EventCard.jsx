@@ -3,7 +3,7 @@ import { useState } from 'react'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 import Button from '../../core/Button/Button.jsx'
 
-function EventCard ({ id, date, hour, location, ticketUrl }) {
+function EventCard ({ date, hour, location, ticketUrl }) {
   const [isOpen, setIsOpen] = useState(false)
 
   const handleClick = () => {
@@ -15,18 +15,25 @@ function EventCard ({ id, date, hour, location, ticketUrl }) {
       <div className='EventCard'>
         <div className='EventCard-container'>
           <div className='EventCard-info'>
-            <h3 className='EventCard-title'><span className=''>{date}</span></h3>
+            <h3 className='EventCard-date'><span className=''>{date}</span></h3>
             <ul className='EventCard-list EventCard-list--info'>
               <li className='EventCard-item EventCard-item--info'>
-                <span className='EventCard-place'>{location.adress.place}, </span>
-                <span className='EventCard-street'>{location.adress.street.name} {location.adress.street.number}.</span>
+                <p className='EventCard-adress'>
+                  <span className='EventCard-place'>{location.adress.place}, </span>
+                  <span className='EventCard-streetName'>{location.adress.street.name} </span>
+                  <span className='EventCard-streetNumber'>{location.adress.street.number}.</span>
+                </p>
               </li>
               <li className='EventCard-item EventCard-item--info'>
-                <span className='EventCard-hour'>{hour}</span>
+                <p>
+                  <span className='EventCard-hour'>{hour}</span>
+                </p>
               </li>
               <li className='EventCard-item EventCard-item--info'>
-                <span className='EventCard-city'>{location.city}, </span>
-                <span className='EventCard-province'>{location.province}.</span>
+                <p className='EventCard-location'>
+                  <span className='EventCard-city'>{location.city}, </span>
+                  <span className='EventCard-province'>{location.province}.</span>
+                </p>
               </li>
             </ul>
           </div>
@@ -54,15 +61,11 @@ function EventCard ({ id, date, hour, location, ticketUrl }) {
             </ul>
           </div>
         </div>
-        <div className={`EventCard-googleMapsLocation ${!isOpen ? '' : 'is-open'}`}>
-          <details open className='EventCard-details'>
-            <summary className='EventCard-summary'>
-              <iframe
-                className={`EventCard-iframe ${!isOpen ? '' : 'is-open'}`}
-                src={location.googleMapsUrl}
-              />
-            </summary>
-          </details>
+        <div className='EventCard-googleMapsLocation'>
+          <iframe
+            className={`EventCard-iframe ${!isOpen ? '' : 'is-open'}`}
+            src={location.googleMapsUrl}
+          />
         </div>
       </div>
     </>

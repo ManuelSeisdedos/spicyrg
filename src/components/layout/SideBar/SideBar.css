@@ -1,7 +1,3 @@
-.SideBar {
-    font-family: 'Roboto-Bold';
-    font-size: 1rem;
-}
 .SideBar-container {
     display: grid;
     grid-template-columns: 11.5rem auto;
@@ -23,7 +19,7 @@
     width: 100%;
 	max-width: 11.5rem;
 	height: 100dvh;
-    background-color: #1B1D1C;
+    background-color: var(--soft-black-color);
 	transition: all 250ms ease;
 	transform: translateX(-100%);
 }
@@ -67,5 +63,7 @@
 }
 
 .LinkTo--sideBarNav {
-    color: #C4C393;
+    font-family: var(--bold-font);
+    font-size: 1rem;
+    color: var(--light-mustard-color);
 }

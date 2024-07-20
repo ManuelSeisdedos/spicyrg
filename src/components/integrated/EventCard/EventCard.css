@@ -5,8 +5,8 @@
     width: 328px;
     margin: 1rem;
     padding: 10px 0;
-    border-top: 2px solid #1B1D1C;
-    border-bottom: 2px solid #1B1D1C;
+    border-top: 2px solid var(--soft-black-color);
+    border-bottom: 2px solid var(--soft-black-color);
 }
 .EventCard-container {
     display: flex;
@@ -21,17 +21,16 @@
     justify-content: space-between;
     align-items: center;
 }
-.EventCard-summary {
+.EventCard-googleMapsLocation {
     display: flex;
     justify-content: center;
     align-items: center;
-    list-style: none;
-    /* user-select: none; */
 }
 .EventCard-iframe {
-    width: 100%;
+    width: 100dvw;
     height: 0;
     margin-top: 0;
+    border: none;
     visibility: hidden;
     transition: all 500ms ease;
 }
@@ -41,12 +40,12 @@
     visibility: visible;
 }
 
-.EventCard-title {
+.EventCard-date {
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 .EventCard-item--info {
-    font-family: 'Roboto-Regular';
+    font-family: var(--regular-font);
     font-size: 12px;
 }
 .Button--eventCardLocationBtn {
@@ -58,14 +57,14 @@
     align-items: center;
     width: 70px;
     height: 30px;
-    font-family: 'Roboto-Bold';
+    font-family: var(--bold-font);
     font-size: 12px;
-    color: #C4C393;
-    background-color: #1B1D1C;
+    color: var(--light-mustard-color);
+    background-color: var(--soft-black-color);
     margin: 0 1rem;
     border-radius: 10px;
 }
 .LinkTo--eventCardTicketLink:hover {
-    color: #fff;
-    background-color: #EA1821;
+    color: var(--white-color);
+    background-color: var(--red-spicy-color);
 }
