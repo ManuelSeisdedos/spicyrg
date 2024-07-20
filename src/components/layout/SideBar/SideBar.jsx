@@ -24,7 +24,7 @@ function SideBar () {
           <div className={`SideBar-subcontainer ${!isOpen ? '' : 'is-open'}`}>
             <div className='SideBar-btnClose'>
               <Button
-                svg='src/assets/img/icons/SideBarActivada.svg'
+                svg='src/assets/img/icons/SideBar.svg'
                 handleClick={handleClick}
                 modifire='sideBarBntClose'
               />
