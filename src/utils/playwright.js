@@ -14,15 +14,20 @@ import playwright from 'playwright' // Elegimos chromium (despues hay que dectec
 
   await page.waitForTimeout(30000) // Aca realizar el login con playwright
 
-  await page.waitForSelector('._aagv')
+  await page.waitForSelector('._ac7v') // ._aagv div que contiene el elemento img _ac7v
 
-  const info = await page.$$eval('._aagv'
-    , (results) => (results.map((el) => {
-      const imgSrc = el.querySelector('img').getAttribute('src')
-      return { imgSrc }
-    })))
+  const json = await page.$$eval('._ac7v', (results) => (results.map((container) => {
+    const publications = container.querySelectorAll('.x1lliihq')
+    const publicationsData = publications.map((publication) => {
+      const imgUrl = publication.querySelector('a').getAttribute('href')
+      const imgUrlComplete = 'https://www.instagram.com'.concat(imgUrl)
+      const imgSrc = publication.querySelector('img').getAttribute('src')
+      return { imgUrlComplete, imgSrc }
+    })
+    return { publicationsData }
+  })))
 
-  console.log({ info })
+  console.log({ json })
 
   await context.close()
   await browser.close() // Cerramos el navegador
