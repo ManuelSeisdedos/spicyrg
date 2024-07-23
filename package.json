@@ -9,7 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "host": "vite --host",
-    "run-playwright": "node ./src/utils/getInstagramPosts.js"
+    "run-playwright": "node ./src/utils/scrapeInstagramPosts.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",

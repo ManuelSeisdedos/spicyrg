@@ -26,7 +26,9 @@ import playwright from 'playwright' // Elegimos chromium (despues hay que dectec
 
   await submitButton.click()
 
-  await page.goto('https://www.instagram.com/limineenergiarenovable/')
+  await page.waitForTimeout(5000)
+
+  await page.goto('https://www.instagram.com/spicy.rg/')
 
   await page.waitForSelector('._ac7v') // ._aagv div que contiene el elemento img _ac7v
 
@@ -43,8 +45,9 @@ import playwright from 'playwright' // Elegimos chromium (despues hay que dectec
         const linkTo = 'https://www.instagram.com'.concat(href)
         const imgElement = link.querySelector('img')
         const img = imgElement ? imgElement.getAttribute('src') : null // Verificamos si hay un elemento img
+        const imgAlt = imgElement ? imgElement.getAttribute('alt') : null
         const modifire = 'instagramPost'
-        return { uuid, linkTo, isBlankInitialization, img, modifire }
+        return { uuid, linkTo, isBlankInitialization, img, imgAlt, modifire }
       })
     }).flat() // Uso de flat: Después de mapear los contenedores y los enlaces, se usa .flat() para aplanar el array de arrays en un solo array de objetos.
     return JSON.stringify(data)
