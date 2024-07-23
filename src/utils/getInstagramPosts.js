@@ -1,11 +1,11 @@
 import playwright from 'playwright' // Elegimos chromium (despues hay que dectectar bien que navegador tiene el cliente)
 
 // ¡La libreria playwright funciona de manera ASINCRONICA!
-const getInstagramPosts = async () => {
+(async () => {
   process.loadEnvFile()
 
   const browser = await playwright.chromium.launch({ // Con launch iniciamos el navegador
-    headless: true // En true, abre el navegador en segundo plano
+    headless: false // En true, abre el navegador en segundo plano
   })
 
   const context = await browser.newContext() // Generamos un contexto en incognito
@@ -50,10 +50,8 @@ const getInstagramPosts = async () => {
     return JSON.stringify(data)
   })
 
+  console.log(instagramPosts)
+
   await context.close() // Cerramos el contexto
   await browser.close() // Cerramos el navegador
-
-  return { instagramPosts }
-}
-
-export { getInstagramPosts }
+})()

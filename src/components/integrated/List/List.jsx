@@ -6,7 +6,7 @@ function List ({ children, isOrderedInitialization, items, modifire }) {
 
   const mapItems = (children, items, className) => {
     return items.map((item) => (
-      <li className={className} key={item.id}>
+      <li className={className} key={item.uuid}>
         {children && cloneElement(children, { ...item }/* Spread Operator */)}
       </li>
     ))

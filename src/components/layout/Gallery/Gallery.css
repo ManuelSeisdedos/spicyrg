@@ -1,0 +1,45 @@
+.Gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--soft-black-color);
+    padding: 1rem;
+}
+.Gallery-title {
+    margin: 1rem ;
+    color: var(--light-mustard-color);
+}
+.Gallery-linkTo {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.UnorderedList--gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            127px,
+            1fr
+        )
+    );
+    gap: 1rem;
+}
+.UnorderedList-item--gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LinkTo--galleryLinkTo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-mustard-color); 
+}
+.LinkTo-img--instagramPost {
+    width: 100%;
+    height: 100%;
+    max-width: 127px;
+    max-height: 127px;
+}

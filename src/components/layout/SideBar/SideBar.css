@@ -67,3 +67,7 @@
     font-size: 1rem;
     color: var(--light-mustard-color);
 }
+
+.UnorderedList-item--sideBarContact>.LinkTo--contact span {
+    display: none;
+}
