@@ -1,7 +1,7 @@
 import playwright from 'playwright' // Elegimos chromium (despues hay que dectectar bien que navegador tiene el cliente)
 
 // ¡La libreria playwright funciona de manera ASINCRONICA!
-(async () => {
+const getInstagramPosts = async () => {
   process.loadEnvFile()
 
   const browser = await playwright.chromium.launch({ // Con launch iniciamos el navegador
@@ -26,27 +26,34 @@ import playwright from 'playwright' // Elegimos chromium (despues hay que dectec
 
   await submitButton.click()
 
-  await page.goto('https://www.instagram.com/vis.dlss')
+  await page.goto('https://www.instagram.com/limineenergiarenovable/')
 
   await page.waitForSelector('._ac7v') // ._aagv div que contiene el elemento img _ac7v
 
-  const json = await page.$$eval('._ac7v', (containers) => {
-    const data = containers.map((container) => {
+  const instagramPosts = await page.$$eval('._ac7v', (containers) => {
+    const data = containers.map((container, index) => {
+      if (index === 5) {
+        return null
+      }
       const links = Array.from(container.querySelectorAll('a'))
       return links.map((link) => {
         const uuid = crypto.randomUUID()
-        const imgHref = link.getAttribute('href') // Obtenemos la url
-        const imgUrl = 'https://www.instagram.com'.concat(imgHref)
+        const isBlankInitialization = true
+        const href = link.getAttribute('href') // Obtenemos la url
+        const linkTo = 'https://www.instagram.com'.concat(href)
         const imgElement = link.querySelector('img')
-        const imgSrc = imgElement ? imgElement.getAttribute('src') : null // Verificamos si hay un elemento img
-        return { uuid, imgUrl, imgSrc }
+        const img = imgElement ? imgElement.getAttribute('src') : null // Verificamos si hay un elemento img
+        const modifire = 'instagramPost'
+        return { uuid, linkTo, isBlankInitialization, img, modifire }
       })
     }).flat() // Uso de flat: Después de mapear los contenedores y los enlaces, se usa .flat() para aplanar el array de arrays en un solo array de objetos.
     return JSON.stringify(data)
   })
 
-  console.log(json)
-
   await context.close() // Cerramos el contexto
   await browser.close() // Cerramos el navegador
-})()
+
+  return { instagramPosts }
+}
+
+export { getInstagramPosts }
