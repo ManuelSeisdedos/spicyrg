@@ -60,3 +60,7 @@
 .Button--galleryLoadMoreBtn:hover {
     color: var(--white-color);
 }
+.Button--galleryLoadMoreBtn:disabled {
+    color: var(--soft-black-disabled-color);
+    background-color: var(--light-mustard-disabled-color);
+}

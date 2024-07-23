@@ -24,6 +24,8 @@
     --red-spicy-color: #EA1821;
     --soft-black-color: #1B1D1C;
     --light-mustard-color: #C4C393;
+    --soft-black-disabled-color: #505551;
+    --light-mustard-disabled-color: #c9c8b3;
 }
 #root {
     font-family: var(--regular-font); 

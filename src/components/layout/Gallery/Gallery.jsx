@@ -1,30 +1,14 @@
 import './Gallery.css'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { useLoadGallery } from '../../../hooks/useLoadGallery.js'
 import { instagramData } from '../../../consts/instagramData.js'
-import { getInstagramPosts } from '../../../services/getInstagramPosts.js'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 import Button from '../../core/Button/Button.jsx'
 import List from '../../integrated/List/List.jsx'
 
 function Gallery () {
   const [socialMediaItem] = useState(instagramData)
-  const [gallery, setGallery] = useState([])
-  const [isLoadMore, setIsLoadMore] = useState(false)
-
-  const handleClick = () => {
-    setIsLoadMore(!isLoadMore)
-  }
-
-  useEffect(() => {
-    getInstagramPosts().then((instagramPosts) => {
-      if (!isLoadMore) {
-        const newInstagramPosts = instagramPosts.slice(0, 6)
-        setGallery(newInstagramPosts)
-      } else {
-        setGallery(instagramPosts)
-      }
-    })
-  }, [isLoadMore])
+  const { gallery, isLoadMore, handleClick } = useLoadGallery()
 
   return (
     <>
@@ -49,7 +33,7 @@ function Gallery () {
         <div className='Gallery-loadMoreBtn'>
           <Button
             text='Cargar más'
-            handleClick={isLoadMore ? undefined : handleClick}
+            handleClick={handleClick}
             modifire='galleryLoadMoreBtn'
             disabled={!!isLoadMore}
           />
