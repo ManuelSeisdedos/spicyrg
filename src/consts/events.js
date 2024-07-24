@@ -1,6 +1,6 @@
 const events = [
   {
-    id: 1,
+    uuid: crypto.randomUUID(),
     date: 'FEB 12/25',
     hour: '23:59hs',
     location: {
@@ -18,7 +18,7 @@ const events = [
     ticketUrl: 'https://www.google.com/'
   },
   {
-    id: 2,
+    uuid: crypto.randomUUID(),
     date: 'FEB 12/25',
     hour: '23:59hs',
     location: {
@@ -36,7 +36,7 @@ const events = [
     ticketUrl: 'https://www.google.com/'
   },
   {
-    id: 3,
+    uuid: crypto.randomUUID(),
     date: 'FEB 12/25',
     hour: '23:59hs',
     location: {
@@ -54,7 +54,7 @@ const events = [
     ticketUrl: 'https://www.google.com/'
   },
   {
-    id: 4,
+    uuid: crypto.randomUUID(),
     date: 'FEB 12/25',
     hour: '23:59hs',
     location: {
@@ -72,7 +72,7 @@ const events = [
     ticketUrl: 'https://www.google.com/'
   },
   {
-    id: 5,
+    uuid: crypto.randomUUID(),
     date: 'FEB 12/25',
     hour: '23:59hs',
     location: {
@@ -90,7 +90,7 @@ const events = [
     ticketUrl: 'https://www.google.com/'
   },
   {
-    id: 6,
+    uuid: crypto.randomUUID(),
     date: 'FEB 12/25',
     hour: '23:59hs',
     location: {

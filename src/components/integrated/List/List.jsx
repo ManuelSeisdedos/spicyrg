@@ -1,9 +1,16 @@
 import './List.css'
-import { useState } from 'react'
-import { mapItems } from '../../../utils/mapItems.jsx'
+import { useState, cloneElement } from 'react'
 
 function List ({ children, isOrderedInitialization, items, modifire }) {
   const [isOrdered] = useState(isOrderedInitialization)
+
+  const mapItems = (children, items, className) => {
+    return items.map((item) => (
+      <li className={className} key={item.uuid}>
+        {children && cloneElement(children, { ...item }/* Spread Operator */)}
+      </li>
+    ))
+  }
 
   return (
     <>

@@ -41,7 +41,7 @@ function EventCard ({ date, hour, location, ticketUrl }) {
             <ul className='EventCard-list EventCard-list--clicks'>
               <li className='EventCard-item EventCard-item--clicks'>
                 <Button
-                  svg={
+                  img={
                   !isOpen
                     ? 'src/assets/img/icons/Maps.svg'
                     : 'src/assets/img/icons/MapsActivado.svg'

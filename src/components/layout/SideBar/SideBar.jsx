@@ -15,7 +15,7 @@ function SideBar () {
       <div className='SideBar'>
         <div className='SideBar-btnOpen'>
           <Button
-            svg='src/assets/img/icons/SideBar.svg'
+            img='src/assets/img/icons/SideBar.svg'
             handleClick={handleClick}
             modifire='sideBarBtnOpen'
           />
@@ -24,7 +24,7 @@ function SideBar () {
           <div className={`SideBar-subcontainer ${!isOpen ? '' : 'is-open'}`}>
             <div className='SideBar-btnClose'>
               <Button
-                svg='src/assets/img/icons/SideBar.svg'
+                img='src/assets/img/icons/SideBar.svg'
                 handleClick={handleClick}
                 modifire='sideBarBntClose'
               />

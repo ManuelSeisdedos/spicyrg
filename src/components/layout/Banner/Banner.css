@@ -30,6 +30,7 @@
     margin-top: -8rem;
 }
 .LinkTo--bannerLinkToEvents {
+    
     align-self: end;
     font-family: var(--bold-font);
     font-size: 20px;
@@ -37,7 +38,7 @@
     height: 50px;
     color: var(--soft-black-color);
     background-color: var(--light-mustard-color);
-    padding: 0.7rem 2rem;
+    padding: 0.8rem 2rem;
     border-radius: 2rem;
     transition: all 250ms ease;
 }
