@@ -1,13 +1,20 @@
 import './ContactBox.css'
 import Button from '../../core/Button/Button'
-import ReCaptcha from '../../ReCaptcha/ReCaptcha'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 function ContactBox () {
+
+  const SITEKEY = import.meta.env.VITE_SITEKEY_RECAPTCHA
+  
+  const handleChange = (e) => {
+    console.log(e);
+  }
+
   return (
     <>
       <div className='ContactBox'>
         <h4 className='ContactBox-title'>CONTACTO</h4>
-        <form className='ContactBox-form' action='' method='POST'>
+        <form className='ContactBox-form' action='' method='POST' onSubmit={"handleSubmit"}>
           <div className='ContactBox-inputs'>
             <input
               className='ContactBox-input'
@@ -37,7 +44,7 @@ function ContactBox () {
               required
             />
           </div>
-          <ReCaptcha />
+          <ReCAPTCHA sitekey={SITEKEY} onChange={handleChange} theme='dark'/>
           <div className='ContactBox-sendBtn'>
             <Button
               text='Enviar'
