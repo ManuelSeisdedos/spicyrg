@@ -1,10 +1,10 @@
 import './App.css'
 import { slogan } from './consts/slogan.js'
-import Header from './components/layout/Header/Header.jsx'
-import SideBar from './components/layout/SideBar/SideBar.jsx'
-import Banner from './components/layout/Banner/Banner.jsx'
-import Events from './components/layout/Events/Events.jsx'
-import Footer from './components/layout/Footer/Footer.jsx'
+import Header from './Components/layout/Header/Header.jsx'
+import SideBar from './Components/layout/SideBar/SideBar.jsx'
+import Banner from './Components/layout/Banner/Banner.jsx'
+import Events from './Components/layout/Events/Events.jsx'
+import Footer from './Components/layout/Footer/Footer.jsx'
 
 function App () {
   return (

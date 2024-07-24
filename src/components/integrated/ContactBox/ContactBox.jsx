@@ -1,5 +1,6 @@
 import './ContactBox.css'
 import Button from '../../core/Button/Button'
+import ReCaptcha from '../../ReCaptcha/ReCaptcha'
 
 function ContactBox () {
   return (
@@ -36,6 +37,7 @@ function ContactBox () {
               required
             />
           </div>
+          <ReCaptcha />
           <div className='ContactBox-sendBtn'>
             <Button
               text='Enviar'
