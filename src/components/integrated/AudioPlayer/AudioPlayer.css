@@ -1,0 +1,49 @@
+.AudioPlayer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 425px;
+    border-radius: 10px;
+    background-color: var(--light-mustard-transparent-color);
+}
+.AudioPlayer-img {
+    width: 250px;
+    height: 243px;
+}
+.AudioPlayer-soundInfo {
+    width: 250px;
+    padding: 0.5rem 0;
+}
+.AudioPlayer-soundName {
+    font-size: 30px;
+}
+.AudioPlayer-artistName {
+    font-family: var(--regular-font);
+    font-size: 14px;
+    color: var(--soft-black-color);
+}
+.AudioPlayer-handleAudioPlayer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.AudioPlayer-currentTime {
+    font-family: var(--regular-font);
+    font-size: 1rem;
+    color: var(--soft-black-color);
+}
+.AudioPlayer-btnMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.AudioPlayer-item {
+    padding: 1rem 0.6rem 0rem 0.6rem;
+}
+.Button--audioPlayerPlayedBtn {
+    transition: 300ms ease-out;
+}

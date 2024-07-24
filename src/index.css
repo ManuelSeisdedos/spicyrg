@@ -26,6 +26,7 @@
     --light-mustard-color: #C4C393;
     --soft-black-disabled-color: #505551;
     --light-mustard-disabled-color: #c9c8b3;
+    --light-mustard-transparent-color: #c4c393ec;
 }
 #root {
     font-family: var(--regular-font); 

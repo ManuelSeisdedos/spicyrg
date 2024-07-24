@@ -3,6 +3,7 @@ import { slogan } from './consts/slogan.js'
 import Header from './components/layout/Header/Header.jsx'
 import SideBar from './components/layout/SideBar/SideBar.jsx'
 import Banner from './components/layout/Banner/Banner.jsx'
+import Sets from './components/layout/Sets/Sets.jsx'
 import Events from './components/layout/Events/Events.jsx'
 import Gallery from './components/layout/Gallery/Gallery.jsx'
 import Footer from './components/layout/Footer/Footer.jsx'
@@ -18,6 +19,9 @@ function App () {
           <Banner
             slogan={slogan}
           />
+        </section>
+        <section className='Main-Sets'>
+          <Sets />
         </section>
         <section className='Main-events'>
           <Events />
