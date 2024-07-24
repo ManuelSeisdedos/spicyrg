@@ -15,18 +15,18 @@ function App () {
         <SideBar />
       </Header>
       <main className='Main'>
-        <section className='Main-banner'>
+        <section className='Main-banner' id='banner'>
           <Banner
             slogan={slogan}
           />
         </section>
-        <section className='Main-Sets'>
+        <section className='Main-Sets' id='sets'>
           <Sets />
         </section>
-        <section className='Main-events'>
+        <section className='Main-events' id='events'>
           <Events />
         </section>
-        <section className='Main-gallery'>
+        <section className='Main-gallery' id='gallery'>
           <Gallery />
         </section>
       </main>

@@ -4,7 +4,7 @@ import Button from '../../core/Button/Button'
 function ContactBox () {
   return (
     <>
-      <div className='ContactBox'>
+      <div className='ContactBox' id='contact'>
         <h4 className='ContactBox-title'>CONTACTO</h4>
         <form className='ContactBox-form' action='' method='POST'>
           <div className='ContactBox-inputs'>

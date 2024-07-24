@@ -29,7 +29,8 @@
     --light-mustard-transparent-color: #c4c393ec;
 }
 #root {
-    font-family: var(--regular-font); 
+    font-family: var(--regular-font);
+    background-color: var(--soft-black-color);
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--bold-font); 

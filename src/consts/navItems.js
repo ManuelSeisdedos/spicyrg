@@ -1,35 +1,35 @@
 const navItems = [
   {
     uuid: crypto.randomUUID(),
-    linkTo: '',
+    linkTo: '#',
     text: 'Spicy',
     isBlankInitialization: false,
     modifire: 'sideBarNav'
   },
   {
     uuid: crypto.randomUUID(),
-    linkTo: '',
+    linkTo: '#sets',
     text: 'Sets',
     isBlankInitialization: false,
     modifire: 'sideBarNav'
   },
   {
     uuid: crypto.randomUUID(),
-    linkTo: '',
+    linkTo: '#events',
     text: 'Eventos',
     isBlankInitialization: false,
     modifire: 'sideBarNav'
   },
   {
     uuid: crypto.randomUUID(),
-    linkTo: '',
+    linkTo: '#gallery',
     text: 'Galeria',
     isBlankInitialization: false,
     modifire: 'sideBarNav'
   },
   {
     uuid: crypto.randomUUID(),
-    linkTo: '',
+    linkTo: '#contact',
     text: 'Contacto',
     isBlankInitialization: false,
     modifire: 'sideBarNav'

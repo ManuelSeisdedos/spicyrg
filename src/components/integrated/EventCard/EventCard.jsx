@@ -12,7 +12,7 @@ function EventCard ({ date, hour, location, ticketUrl }) {
 
   return (
     <>
-      <div className='EventCard'>
+      <div className='EventCard' onBlur={!isOpen ? undefined : handleClick}>
         <div className='EventCard-container'>
           <div className='EventCard-info'>
             <h3 className='EventCard-date'><span className=''>{date}</span></h3>

@@ -20,7 +20,7 @@ function Banner ({ slogan }) {
         </div>
         <div className='Banner-linkToEvents'>
           <LinkTo
-            linkTo=''
+            linkTo='#events'
             isBlankInitialization={false}
             text='Próximo Evento'
             modifire='bannerLinkToEvents'
