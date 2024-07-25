@@ -1,21 +1,24 @@
 import './AudioPlayer.css'
 import { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player/soundcloud'
+
 import Button from '../../core/Button/Button'
 
 function AudioPlayer ({ songs }) {
+  const [isReady, setIsReady] = useState(false)
   const [totalSongs] = useState(songs.length)
   const [currentIndexSong, setCurrentIndexSong] = useState(0)
   const [songData, setSongData] = useState({})
   const [isPlaying, setIsPlaying] = useState(false)
-  const [currentTime] = useState('0:00')
-  const [duration] = useState('0:00')
+  const [currentTime, setCurrentTime] = useState()
+  const [duration, setDuration] = useState()
 
   const handlePlaying = () => {
     setIsPlaying(!isPlaying)
   }
 
   const handleNextSong = () => {
+    setIsReady(false)
     if (currentIndexSong >= 0 && currentIndexSong < totalSongs - 1) {
       const nextIndexSong = currentIndexSong + 1
       const nextSong = songs.at(nextIndexSong)
@@ -30,6 +33,7 @@ function AudioPlayer ({ songs }) {
   }
 
   const handlePreviousSong = () => {
+    setIsReady(false)
     if (currentIndexSong > 0 && currentIndexSong <= totalSongs - 1) {
       const previousIndexSong = currentIndexSong - 1
       const previousSong = songs.at(previousIndexSong)
@@ -43,6 +47,21 @@ function AudioPlayer ({ songs }) {
     }
   }
 
+  function format (seconds) {
+    const date = new Date(seconds * 1000)
+    const hh = date.getUTCHours()
+    const mm = date.getUTCMinutes()
+    const ss = pad(date.getUTCSeconds())
+    if (hh) {
+      return `${hh}:${pad(mm)}:${ss}`
+    }
+    return `${mm}:${ss}`
+  }
+
+  function pad (string) {
+    return ('0' + string).slice(-2)
+  }
+
   useEffect(() => {
     const openingSong = songs.at(0)
     setSongData(openingSong)
@@ -51,23 +70,31 @@ function AudioPlayer ({ songs }) {
   return (
     <>
       <div className='AudioPlayer'>
-        <div className='AudioPlayer-songImg'>
-          <img className='AudioPlayer-img' src={songData.songImgUrl} alt={songData.songImgAlt} />
-        </div>
-        <div className='AudioPlayer-songInfo'>
-          <h3 className='AudioPlayer-songName'>{songData.songName}</h3>
-          <span className='AudioPlayer-artistName'>{songData.artistName}</span>
-        </div>
+        {isReady
+          ? (
+            <>
+              <div className='AudioPlayer-songImg'>
+                <img className='AudioPlayer-img' src={songData.songImgUrl} alt={songData.songImgAlt} />
+              </div>
+              <div className='AudioPlayer-songInfo'>
+                <h3 className='AudioPlayer-songName'>{songData.songName}</h3>
+                <span className='AudioPlayer-artistName'>{songData.artistName}</span>
+              </div>
+              <div className=''>
+                <span className='AudioPlayer-currentTime'>{currentTime} - {duration}</span>
+              </div>
+            </>
+            )
+          : (<span>Cargando...</span>)}
         <div className='AudioPlayer-handleAudioPlayer'>
-          <span className='AudioPlayer-currentTime'>{currentTime} - {duration}</span>
           <menu className='AudioPlayer-btnMenu'>
             <li className='AudioPlayer-item'>
               <Button
                 img='src\assets\img\icons\IzquierdaReproductor.svg'
-                imgAlt='Boton para ir a la siguiente cancion'
-                handleClick={handleNextSong}
+                imgAlt='Boton para ir a la anterior cancion'
+                handleClick={handlePreviousSong}
                 disabled={false}
-                modifire='audioPlayerPreviousBtn'
+                modifire='audioPlayerNextBtn'
               />
             </li>
             <li className='AudioPlayer-item'>
@@ -82,10 +109,10 @@ function AudioPlayer ({ songs }) {
             <li className='AudioPlayer-item'>
               <Button
                 img='src\assets\img\icons\DerechaReproductor.svg'
-                imgAlt='Boton para ir a la anterior cancion'
-                handleClick={handlePreviousSong}
+                imgAlt='Boton para ir a la siguiente cancion'
+                handleClick={handleNextSong}
                 disabled={false}
-                modifire='audioPlayerNextBtn'
+                modifire='audioPlayerPreviousBtn'
               />
             </li>
           </menu>
@@ -96,6 +123,21 @@ function AudioPlayer ({ songs }) {
           height='0px'
           style={{ display: 'none' }}
           playing={!!isPlaying}
+          volume={0.7}
+          onReady={() => {
+            setIsReady(true)
+          }}
+          onProgress={(progress) => {
+            const formatProgress = format(progress.playedSeconds)
+            setCurrentTime(formatProgress)
+          }}
+          onDuration={(duration) => {
+            const formatDuration = format(duration)
+            setDuration(formatDuration)
+          }}
+          onEnded={() => {
+            handleNextSong()
+          }}
         />
       </div>
     </>
