@@ -19,19 +19,16 @@
 .UnorderedList--gallery {
     width: 100%;
     display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     grid-template-columns: repeat(
         auto-fit,
         minmax(
             127px,
-            1fr
+            127px
         )
     );
-    gap: 1rem;
-}
-.UnorderedList-item--gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .LinkTo--galleryLinkToSocialMedia {
     display: flex;
@@ -42,8 +39,6 @@
 .LinkTo-img--instagramPost {
     width: 100%;
     height: 100%;
-    max-width: 127px;
-    max-height: 127px;
 }
 .Button--galleryLoadMoreBtn{
     font-family: var(--bold-font);

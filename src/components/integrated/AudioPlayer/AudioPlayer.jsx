@@ -1,71 +1,23 @@
 import './AudioPlayer.css'
-import { useEffect, useState } from 'react'
+import { useAudioPlayer } from '../../../hooks/useAudioPlayer'
 import ReactPlayer from 'react-player/soundcloud'
-
 import Button from '../../core/Button/Button'
 
 function AudioPlayer ({ songs }) {
-  const [isReady, setIsReady] = useState(false)
-  const [totalSongs] = useState(songs.length)
-  const [currentIndexSong, setCurrentIndexSong] = useState(0)
-  const [songData, setSongData] = useState({})
-  const [isPlaying, setIsPlaying] = useState(false)
-  const [currentTime, setCurrentTime] = useState()
-  const [duration, setDuration] = useState()
-
-  const handlePlaying = () => {
-    setIsPlaying(!isPlaying)
-  }
-
-  const handleNextSong = () => {
-    setIsReady(false)
-    if (currentIndexSong >= 0 && currentIndexSong < totalSongs - 1) {
-      const nextIndexSong = currentIndexSong + 1
-      const nextSong = songs.at(nextIndexSong)
-      setCurrentIndexSong(nextIndexSong)
-      setSongData(nextSong)
-    }
-    if (currentIndexSong >= totalSongs - 1) {
-      const nextSong = songs.at(0)
-      setCurrentIndexSong(0)
-      setSongData(nextSong)
-    }
-  }
-
-  const handlePreviousSong = () => {
-    setIsReady(false)
-    if (currentIndexSong > 0 && currentIndexSong <= totalSongs - 1) {
-      const previousIndexSong = currentIndexSong - 1
-      const previousSong = songs.at(previousIndexSong)
-      setCurrentIndexSong(previousIndexSong)
-      setSongData(previousSong)
-    }
-    if (currentIndexSong <= 0) {
-      const nextSong = songs.at(totalSongs - 1)
-      setCurrentIndexSong(totalSongs - 1)
-      setSongData(nextSong)
-    }
-  }
-
-  function format (seconds) {
-    const date = new Date(seconds * 1000)
-    const hh = date.getUTCHours()
-    const mm = date.getUTCMinutes()
-    const ss = pad(date.getUTCSeconds())
-    if (hh) {
-      return `${hh}:${pad(mm)}:${ss}`
-    }
-    return `${mm}:${ss}`
-  }
-
-  function pad (string) {
-    return ('0' + string).slice(-2)
-  }
-
-  useEffect(() => {
-    const openingSong = songs.at(0)
-    setSongData(openingSong)
-  }, [])
+  const {
+    isReady,
+    songData,
+    isPlaying,
+    currentTime,
+    duration,
+    format,
+    handleReady,
+    handleCurrentTime,
+    handleDuration,
+    handlePlaying,
+    handleNextSong,
+    handlePreviousSong
+  } = useAudioPlayer(songs)
 
   return (
     <>
@@ -80,12 +32,27 @@ function AudioPlayer ({ songs }) {
                 <h3 className='AudioPlayer-songName'>{songData.songName}</h3>
                 <span className='AudioPlayer-artistName'>{songData.artistName}</span>
               </div>
-              <div className=''>
-                <span className='AudioPlayer-currentTime'>{currentTime} - {duration}</span>
+              <div className='AudioPlayer-time'>
+                <span className='AudioPlayer-timeSpan'>{currentTime} - {duration}</span>
               </div>
             </>
             )
-          : (<span>Cargando...</span>)}
+          : (
+            <>
+              <div className='Load'>
+                <div className='Load-songImg'>
+                  <div className='Load-img' />
+                </div>
+                <div className='Load-songInfo'>
+                  <div className='Load-songName' />
+                  <div className='Load-artistName' />
+                </div>
+                <div className='Load-time'>
+                  <div className='Load-timeSpan' />
+                </div>
+              </div>
+            </>
+            )}
         <div className='AudioPlayer-handleAudioPlayer'>
           <menu className='AudioPlayer-btnMenu'>
             <li className='AudioPlayer-item'>
@@ -125,15 +92,15 @@ function AudioPlayer ({ songs }) {
           playing={!!isPlaying}
           volume={0.7}
           onReady={() => {
-            setIsReady(true)
+            handleReady(true)
           }}
           onProgress={(progress) => {
             const formatProgress = format(progress.playedSeconds)
-            setCurrentTime(formatProgress)
+            handleCurrentTime(formatProgress)
           }}
           onDuration={(duration) => {
             const formatDuration = format(duration)
-            setDuration(formatDuration)
+            handleDuration(formatDuration)
           }}
           onEnded={() => {
             handleNextSong()

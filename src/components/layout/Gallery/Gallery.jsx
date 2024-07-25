@@ -32,10 +32,9 @@ function Gallery () {
         </List>
         <div className='Gallery-loadMoreBtn'>
           <Button
-            text='Cargar más'
+            text={isLoadMore ? 'Ver menos' : 'Cargar más'}
             handleClick={handleClick}
             modifire='galleryLoadMoreBtn'
-            disabled={!!isLoadMore}
           />
         </div>
       </div>
