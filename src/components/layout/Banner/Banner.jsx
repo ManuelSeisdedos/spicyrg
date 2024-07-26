@@ -10,7 +10,7 @@ function Banner ({ slogan }) {
           <Logo
             src='src\assets\img\Logo Spicy.svg'
             alt='Spicy'
-            modifier='banner'
+            modifire='banner'
           />
           <div className='Banner-text'>
             <p className='Banner-p'>

@@ -8,7 +8,7 @@
     border-radius: 10px;
     background-color: var(--light-mustard-transparent-color);
 }
-.AudioPlayer-img {
+.Logo-img--audioPlayerSongImg {
     width: 250px;
     height: 243px;
 }
@@ -35,7 +35,7 @@
     font-size: 1rem;
     color: var(--soft-black-color);
 }
-.AudioPlayer-btnMenu {
+.UnorderedList--audioPlayerBtns {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,77 +44,29 @@
     gap: 0.2rem;
 }
 .Button--audioPlayerPlayingBtn {
-    transition: 300ms ease-out;
     padding: 0.6rem 0.6rem 0.4rem 0.6rem;
     cursor: pointer;
+    transition: 300ms ease-out;
 }
 .Button--audioPlayerPlayingBtn:hover {
     background-color: #ffffff2a;
     border-radius: 2rem;
 }
 .Button--audioPlayerPreviousBtn {
-    transition: 300ms ease-out;
     padding: 0.6rem 0.6rem 0.4rem 0.4rem;
     cursor: pointer;
+    transition: 300ms ease-out;
 }
 .Button--audioPlayerPreviousBtn:hover {
     background-color: #ffffff2a;
     border-radius: 2rem;
 }
 .Button--audioPlayerNextBtn {
-    transition: 300ms ease-out;
     padding: 0.6rem 0.4rem 0.4rem 0.6rem;
     cursor: pointer;
+    transition: 300ms ease-out;
 }
 .Button--audioPlayerNextBtn:hover {
     background-color: #ffffff2a;
     border-radius: 2rem;
-}
-
-.Load{
-    display: flex;
-    flex-direction: column;
-}
-.Load-img {
-    width: 250px;
-    height: 243px;
-    background: linear-gradient(45deg, #999999d5, #eeeeeed5);
-    background-size: 200% 200%;
-    border-radius: 10px;
-    animation: cambiar 3s ease infinite;
-}
-.Load-songName {
-    width: 10rem;
-    height: 1.5rem;
-    background: linear-gradient(45deg, #999999d5, #eeeeeed5);
-    background-size: 400% 400%;
-    margin: 0.8rem 0;
-    border-radius: 10px;
-    animation: cambiar 3s ease infinite;
-}
-.Load-artistName {
-    width: 3rem;
-    height: 1rem;
-    background: linear-gradient(45deg, #999999d5, #eeeeeed5);
-    background-size: 400% 400%;
-    margin: 0.5rem 0 1rem 0;
-    border-radius: 10px;
-    animation: cambiar 3s ease infinite;
-}
-.Load-time {
-    display: flex;
-    justify-content: center;
-}
-.Load-timeSpan {
-    width: 6rem;
-    height: 1rem;
-    background: linear-gradient(45deg, #999999d5, #eeeeeed5);
-    background-size: 400% 400%;
-    border-radius: 10px;
-    animation: cambiar 3s ease infinite;
-}
-@keyframes cambiar {
-    0%{background-position: 0 50%;}
-    50%{background-position: 100% 50%;}
-    100%{background-position: 0 50%;}
 }
