@@ -62,10 +62,13 @@
     gap: 20px
 }
 
-.LinkTo--sideBarNav {
+.LinkTo--navLink, .LinkTo--aji {
     font-family: var(--bold-font);
     font-size: 1rem;
     color: var(--light-mustard-color);
+}
+.UnorderedList-item--sideBarNav .LinkTo-img--aji {
+    display: none;
 }
 
 .UnorderedList-item--sideBarContact>.LinkTo--contact span {

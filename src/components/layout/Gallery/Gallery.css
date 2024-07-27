@@ -16,6 +16,15 @@
     max-width: 250px;
     margin-bottom: 2rem;
 }
+.NothingToShow-message--galleryNothingToShow {
+    font-family: var(--bold-font);
+    color: var(--soft-black-color);
+    background-color: #ffffffbd;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
 .UnorderedList--gallery {
     width: 100%;
     display: grid;
@@ -29,6 +38,7 @@
             127px
         )
     );
+    max-width: 1000px;
 }
 .LinkTo--galleryLinkToSocialMedia {
     display: flex;
@@ -44,12 +54,13 @@
     font-family: var(--bold-font);
     font-size: 20px;
     width: 200px;
-    height: 50px;
+    height: 49px;
     color: var(--soft-black-color);
     background-color: var(--light-mustard-color);
-    margin: 2rem 0 1rem 0;
+    margin-top: 2rem;
     padding: 0.7rem 2rem;
     border-radius: 2rem;
+    cursor: pointer;
     transition: all 250ms ease;
 }
 .Button--galleryLoadMoreBtn:hover {
@@ -58,4 +69,22 @@
 .Button--galleryLoadMoreBtn:disabled {
     color: var(--soft-black-disabled-color);
     background-color: var(--light-mustard-disabled-color);
+}
+@media (min-width: 500px) {
+    .Gallery-linkToSocialMedia {
+        width: 65%;
+        max-width: 910px;
+    }
+    .UnorderedList--gallery {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(
+                216px,
+                216px
+            )
+        );
+    }
+    .Button--galleryLoadMoreBtn{
+        height: 50px;
+    }
 }

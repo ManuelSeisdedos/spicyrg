@@ -13,9 +13,11 @@ function Banner ({ slogan }) {
             modifire='banner'
           />
           <div className='Banner-text'>
-            <p className='Banner-p'>
-              {slogan}
-            </p>
+            {slogan && (
+              <p className='Banner-p'>
+                {slogan}
+              </p>
+            )}
           </div>
         </div>
         <div className='Banner-linkToEvents'>

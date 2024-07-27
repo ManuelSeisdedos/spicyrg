@@ -72,3 +72,55 @@
     color: var(--white-color);
     background-color: var(--red-spicy-color);
 }
+
+@media (min-width: 500px) {
+    .EventCard-border {
+        width: 90%;
+        max-width: 570px;
+        padding: 0 0 20px 0;
+        border-top: none;
+    }
+    .EventCard-date {
+        margin-bottom: 0.5rem;
+    }
+    .EventCard-list--info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+    .EventCard-adress{
+        display: inline;
+    }
+    .EventCard-iframe.is-open {
+        margin: 25px 0 25px 0;
+        height: 205px;
+    }
+}
+@media (min-width: 700px) {
+    .EventCard-border {
+        width: 90%;
+        max-width: 700px;
+        padding: 0 0 20px 0;
+        border-top: none;
+    }
+    .EventCard-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .EventCard-date {
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
+    .EventCard-list--info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .EventCard-iframe.is-open {
+        margin: 25px 0 25px 0;
+        height: 205px;
+    }
+}

@@ -1,13 +1,13 @@
 import './SideBar.css'
 import { useSideBar } from '../../../hooks/useSideBar.js'
-import { navItems } from '../../../consts/navItems.js'
+
 import { socialMediaItems } from '../../../consts/socialMediaItems.js'
 import Button from '../../core/Button/Button.jsx'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'
-import List from '../../integrated/List/List.jsx'
-import Nav from '../../integrated/Nav/Nav.jsx'
+import List from '../List/List.jsx'
+import Nav from '../Nav/Nav.jsx'
 
-function SideBar () {
+function SideBar ({ navItems }) {
   const { isOpen, handleClick } = useSideBar()
 
   return (

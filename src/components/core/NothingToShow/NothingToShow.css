@@ -1,20 +1,13 @@
-.Events {
+.NothingToShow {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--light-mustard-color);
-    padding: 2rem 0;
 }
-.Events-title {
-    margin-bottom: 0.5rem ;
-}
-.NothingToShow-message--eventsNothingToShow {
+.NothingToShow-message {
     font-family: var(--bold-font);
     color: var(--soft-black-color);
     background-color: #ffffffbd;
     text-align: center;
-    margin: 2rem 0 15rem;
     padding: 1rem;
     border-radius: 10px;
 }

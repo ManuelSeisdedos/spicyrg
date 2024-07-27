@@ -1,5 +1,32 @@
 .Header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    background-color: transparent;
+    width: 100%;
     height: 0px;
+}
+.UnorderedList--headerNav {
+    display: flex;
+    align-items: center;
+}
+.UnorderedList-item--headerNav {
+    margin: 16px 25px;
+}
+.UnorderedList-item--headerNav .LinkTo-text--aji {
+    display: none;
+}
+.UnorderedList-item--headerNav .LinkTo-text {
+    font-family: var(--regular-font);
+}
+@media (min-width: 500px) {
+    .Header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        background-color: var(--soft-black-color);
+        width: 100%;
+        height: 56px;
+    } 
 }

@@ -6,8 +6,8 @@ const useAudioPlayer = (songs) => {
   const [songData, setSongData] = useState({})
   const [isReady, setIsReady] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
-  const [currentTime, setCurrentTime] = useState()
-  const [duration, setDuration] = useState()
+  const [currentTime, setCurrentTime] = useState('0:00')
+  const [duration, setDuration] = useState('0:00')
 
   const format = (seconds) => {
     const date = new Date(seconds * 1000)

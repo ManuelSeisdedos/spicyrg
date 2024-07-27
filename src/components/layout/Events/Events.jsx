@@ -1,20 +1,29 @@
 import './Events.css'
-import { events } from '../../../consts/events.js'
+import NothingToShow from '../../core/NothingToShow/NothingToShow.jsx'
 import List from '../../integrated/List/List.jsx'
 import EventCard from '../../integrated/EventCard/EventCard.jsx'
 
-function Events () {
+function Events ({ events }) {
   return (
     <>
       <div className='Events'>
         <h2 className='Events-title'>EVENTOS</h2>
-        <List
-          isOrderedInitialization
-          items={events}
-          modifire='events'
-        >
-          <EventCard />
-        </List>
+        {!events.length > 0
+          ? (
+            <NothingToShow
+              message='¡Ups! No hay eventos disponibles...'
+              modifire='eventsNothingToShow'
+            />
+            )
+          : (
+            <List
+              isOrderedInitialization
+              items={events}
+              modifire='events'
+            >
+              <EventCard />
+            </List>
+            )}
       </div>
     </>
   )
