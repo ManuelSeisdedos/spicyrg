@@ -71,10 +71,6 @@
     background-color: var(--light-mustard-disabled-color);
 }
 @media (min-width: 500px) {
-    .Gallery-linkToSocialMedia {
-        width: 65%;
-        max-width: 910px;
-    }
     .UnorderedList--gallery {
         grid-template-columns: repeat(
             auto-fit,

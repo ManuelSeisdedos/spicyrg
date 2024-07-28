@@ -8,7 +8,7 @@
     height: 100dvh;
     background-color: transparent;
 	visibility: hidden;
-	transition: all 250ms ease;
+	transition: all 400ms ease;
 }
 .SideBar-container.is-open {
 	visibility: visible;
@@ -20,7 +20,7 @@
 	max-width: 11.5rem;
 	height: 100dvh;
     background-color: var(--soft-black-color);
-	transition: all 250ms ease;
+	transition: all 400ms ease;
 	transform: translateX(-100%);
 }
 .SideBar-subcontainer.is-open {

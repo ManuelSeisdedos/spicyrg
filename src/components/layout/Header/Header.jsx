@@ -1,5 +1,6 @@
 import './Header.css'
 import { useWindowSize } from '../../../hooks/useWindowSize.js'
+import { useHideOnScroll } from '../../../hooks/useHideOnScroll.js'
 import { navItems } from '../../../consts/navItems.js'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 import Nav from '../../integrated/Nav/Nav.jsx'
@@ -8,6 +9,7 @@ import { useEffect, useState } from 'react'
 
 function Header () {
   const { isMobile } = useWindowSize()
+  const { isScroll } = useHideOnScroll()
   const [desktopNavItems, setDesktopNavItems] = useState([])
 
   useEffect(() => {
@@ -19,7 +21,7 @@ function Header () {
 
   return (
     <>
-      <header className='Header'>
+      <header className={`Header ${isScroll ? 'is-scroll' : ''}`}>
         {isMobile
           ? (
             <SideBar

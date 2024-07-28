@@ -1,5 +1,5 @@
 import './EventCard.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useWindowSize } from '../../../hooks/useWindowSize.js'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 import Button from '../../core/Button/Button.jsx'
@@ -12,9 +12,13 @@ function EventCard ({ date, hour, location, ticketUrl }) {
     setIsOpen(!isOpen)
   }
 
+  useEffect(() => {
+    setIsOpen(false)
+  }, [isMobile])
+
   return (
     <>
-      <div className='EventCard'>
+      <div className='EventCard' onBlur={() => { setIsOpen(false) }}>
         <div className='EventCard-border'>
           <div className='EventCard-container'>
             <div className='EventCard-info'>

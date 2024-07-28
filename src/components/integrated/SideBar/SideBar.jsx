@@ -32,6 +32,7 @@ function SideBar ({ navItems }) {
             <div className='SideBar-nav'>
               <Nav
                 items={navItems}
+                eventOnClick={!isOpen ? undefined : handleClick}
                 modifire='sideBarNav'
               >
                 <LinkTo />
