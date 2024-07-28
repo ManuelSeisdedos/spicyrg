@@ -77,7 +77,7 @@
 @media (min-width: 500px) {
     .EventCard {
         width: 100%;
-        max-width: 470px;
+        max-width: 480px;
     }
     .EventCard-border {
         
@@ -91,7 +91,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
     }
     .EventCard-adress{
         display: inline;

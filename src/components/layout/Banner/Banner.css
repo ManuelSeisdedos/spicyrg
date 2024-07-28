@@ -46,18 +46,22 @@
 }
 @media (min-width: 500px) {
     .Banner {
-        height: 100dvh;
+        height: 100vh;
     }
     .Logo--banner { 
-        width: 500px;
+        width: 440px;
         height: 240px;
     }
+    .Banner-linkToEvents {
+        margin-top: -10rem;
+    }
     .Banner-p {
-        width: 350px;
-        font-size: 1.2rem;
+        width: 300px;
+        font-size: 1.1rem;
+        margin-top: -2rem;
     }
     .LinkTo--bannerLinkToEvents {
-        font-size: 2rem;
+        font-size: 1.5rem;
         width: 265px;
         height: 2rem;
         padding: 1rem 2rem;
