@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getInstagramPosts } from '../services/getInstagramPosts.js'
+import { instagramPosts } from '../consts/instagramPosts.js'
 
 const useLoadGallery = () => {
   const [galleryMemory, setGalleryMemory] = useState([])
@@ -12,16 +12,14 @@ const useLoadGallery = () => {
   }
 
   useEffect(() => {
-    getInstagramPosts().then((instagramPosts) => {
-      if (instagramPosts.length >= 7) {
-        const newInstagramPosts = instagramPosts.slice(0, 12)
-        setIsMoreThenSix(true)
-        setGalleryMemory(newInstagramPosts)
-      } else {
-        setIsMoreThenSix(false)
-        setGallery(instagramPosts)
-      }
-    })
+    if (instagramPosts.length >= 7) {
+      const newInstagramPosts = instagramPosts.slice(0, 12)
+      setIsMoreThenSix(true)
+      setGalleryMemory(newInstagramPosts)
+    } else {
+      setIsMoreThenSix(false)
+      setGallery(instagramPosts)
+    }
   }, [])
 
   useEffect(() => {

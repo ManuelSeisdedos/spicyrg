@@ -4,7 +4,7 @@ import { useLoadGallery } from '../../../hooks/useLoadGallery.js'
 import { instagramData } from '../../../consts/instagramData.js'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 import Button from '../../core/Button/Button.jsx'
-import NothingToShow from '../../core/NothingToShow/NothingToShow.jsx'
+import NothingToShow from '../../notifications/NothingToShow/NothingToShow.jsx'
 import List from '../../integrated/List/List.jsx'
 
 function Gallery () {

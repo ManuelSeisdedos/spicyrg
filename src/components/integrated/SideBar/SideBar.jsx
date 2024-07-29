@@ -15,7 +15,7 @@ function SideBar ({ navItems }) {
       <div className='SideBar'>
         <div className='SideBar-btnOpen'>
           <Button
-            img='src/assets/img/icons/SideBar.svg'
+            img='src/assets/img/icons/side-bar-icon.svg'
             handleClick={handleClick}
             modifire='sideBarBtnOpen'
           />
@@ -24,7 +24,7 @@ function SideBar ({ navItems }) {
           <div className={`SideBar-subcontainer ${!isOpen ? '' : 'is-open'}`}>
             <div className='SideBar-btnClose'>
               <Button
-                img='src/assets/img/icons/SideBar.svg'
+                img='src/assets/img/icons/side-bar-icon.svg'
                 handleClick={handleClick}
                 modifire='sideBarBntClose'
               />

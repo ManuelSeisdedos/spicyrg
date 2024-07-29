@@ -18,7 +18,7 @@ function EventCard ({ date, hour, location, ticketUrl }) {
 
   return (
     <>
-      <div className='EventCard' onBlur={() => { setIsOpen(false) }}>
+      <div className='EventCard'>
         <div className='EventCard-border'>
           <div className='EventCard-container'>
             <div className='EventCard-info'>
@@ -56,7 +56,7 @@ function EventCard ({ date, hour, location, ticketUrl }) {
                   {!isMobile
                     ? (
                       <Button
-                        img={!isOpen ? 'src/assets/img/icons/Maps.svg' : 'src/assets/img/icons/MapsActivado.svg'}
+                        img={!isOpen ? 'src/assets/img/icons/maps-icon.svg' : 'src/assets/img/icons/maps-activado-icon.svg'}
                         handleClick={handleClick}
                         modifire='eventCardLocationBtn'
                       />
@@ -65,7 +65,7 @@ function EventCard ({ date, hour, location, ticketUrl }) {
                       <LinkTo
                         linkTo={location.googleMapsLink}
                         isBlankInitialization
-                        img='src/assets/img/icons/Maps.svg'
+                        img='src/assets/img/icons/maps-icon.svg'
                         modifire='eventCardLocationLink'
                       />
                       )}

@@ -25,7 +25,7 @@ function AudioPlayer ({ songs }) {
   const btnsAudioPlayer = [
     {
       uuid: crypto.randomUUID(),
-      img: 'src/assets/img/icons/IzquierdaReproductor.svg',
+      img: 'src/assets/img/icons/izquierda-reproductor-icon.svg',
       imgAlt: 'Boton para ir a la anterior cancion',
       handleClick: handlePreviousSong,
       disabled: false,
@@ -33,7 +33,7 @@ function AudioPlayer ({ songs }) {
     },
     {
       uuid: crypto.randomUUID(),
-      img: !isPlaying ? 'src/assets/img/icons/Play.svg' : 'src/assets/img/icons/Pause.svg',
+      img: !isPlaying ? 'src/assets/img/icons/play-icon.svg' : 'src/assets/img/icons/pause-icon.svg',
       imgAlt: 'Boton para reproducir o pausar cancion',
       handleClick: handlePlaying,
       disabled: false,
@@ -41,7 +41,7 @@ function AudioPlayer ({ songs }) {
     },
     {
       uuid: crypto.randomUUID(),
-      img: 'src/assets/img/icons/DerechaReproductor.svg',
+      img: 'src/assets/img/icons/derecha-reproductor-icon.svg',
       imgAlt: 'Boton para ir a la siguiente cancion',
       handleClick: handleNextSong,
       disabled: false,
@@ -56,7 +56,7 @@ function AudioPlayer ({ songs }) {
           className='AudioPlayer' style={{ backgroundImage: `url('src/assets/img/sets/${songData.songBackgroundImg}')` }}
         >
           <div className='AudioPlayer-container'>
-            {isReady && currentTime && duration
+            {isReady
               ? (
                 <>
                   <Logo
@@ -69,7 +69,7 @@ function AudioPlayer ({ songs }) {
                     <span className='AudioPlayer-artistName'>{songData.artistName}</span>
                   </div>
                   <div className='AudioPlayer-time'>
-                    <span className='AudioPlayer-timeSpan'>{currentTime} - {duration}</span>
+                    {!currentTime && duration ? (<></>) : (<span className='AudioPlayer-timeSpan'>{currentTime} - {duration}</span>)}
                   </div>
                 </>
                 )

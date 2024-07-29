@@ -1,5 +1,5 @@
 import './Events.css'
-import NothingToShow from '../../core/NothingToShow/NothingToShow.jsx'
+import NothingToShow from '../../notifications/NothingToShow/NothingToShow.jsx'
 import List from '../../integrated/List/List.jsx'
 import EventCard from '../../integrated/EventCard/EventCard.jsx'
 

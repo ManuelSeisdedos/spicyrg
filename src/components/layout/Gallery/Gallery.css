@@ -47,8 +47,8 @@
     color: var(--light-mustard-color); 
 }
 .LinkTo-img--instagramPost {
-    width: 100%;
-    height: 100%;
+    width: 127px;
+    height: 127px;
 }
 .Button--galleryLoadMoreBtn{
     font-family: var(--bold-font);
@@ -79,6 +79,10 @@
                 216px
             )
         );
+    }
+    .LinkTo-img--instagramPost {
+        width: 216px;
+        height: 216px;
     }
     .Button--galleryLoadMoreBtn{
         height: 50px;

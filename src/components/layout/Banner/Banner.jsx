@@ -8,7 +8,7 @@ function Banner ({ slogan }) {
       <div className='Banner'>
         <div className='Banner-logoAndText'>
           <Logo
-            src='src\assets\img\Logo Spicy.svg'
+            src='src\assets\img\spicy-logo.svg'
             alt='Spicy'
             modifire='banner'
           />

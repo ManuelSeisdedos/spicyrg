@@ -3,7 +3,7 @@ const navItems = [
     uuid: crypto.randomUUID(),
     linkTo: '#',
     text: 'Spicy',
-    img: 'src/assets/img/icons/SideBar.svg',
+    img: 'src/assets/img/icons/side-bar-icon.svg',
     imgAlt: 'Ají rojo',
     isBlankInitialization: false,
     modifire: 'aji'
