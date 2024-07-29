@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: 1fr auto;
     justify-items: center;
-    background-image: url("src/assets/img/Principal.webp");
+    background-image: url("src/assets/img/principal.webp");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -17,7 +17,7 @@
 .Logo--banner { 
     width: 340px;
     height: 155px;
-    margin-bottom: 1rem;
+    margin: 5rem 0 1rem 0;
 }
 .Banner-p {
     width: 220px;
@@ -27,7 +27,7 @@
     color: var(--white-color);
 }
 .Banner-linkToEvents {
-    margin-top: -8rem;
+    margin-top: -4rem;
 }
 .LinkTo--bannerLinkToEvents {
     align-self: end;
@@ -46,14 +46,14 @@
 }
 @media (min-width: 500px) {
     .Banner {
-        height: 100vh;
+        height: 100dvh;
     }
     .Logo--banner { 
         width: 440px;
         height: 240px;
     }
     .Banner-linkToEvents {
-        margin-top: -10rem;
+        margin-top: -8rem;
     }
     .Banner-p {
         width: 300px;

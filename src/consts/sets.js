@@ -1,7 +1,7 @@
 const sets = [
   {
     uuid: crypto.randomUUID(),
-    songBackgroundImg: 'PortadaSets07.webp',
+    songBackgroundImg: 'portadaSets07.webp',
     songUrl: 'https://soundcloud.com/araceliriogonzalez/set-psy-07/',
     songImgUrl: 'https://i1.sndcdn.com/artworks-yYoAB5yKeloYxy03-WqXi4g-t500x500.jpg',
     songImgAlt: 'Imagen del SET SPY 07',
@@ -10,7 +10,7 @@ const sets = [
   },
   {
     uuid: crypto.randomUUID(),
-    songBackgroundImg: 'PortadaSets01.webp',
+    songBackgroundImg: 'portadaSets08.webp',
     songUrl: 'https://soundcloud.com/araceliriogonzalez/set-psy-08/',
     songImgUrl: 'https://i1.sndcdn.com/artworks-jKaErXD4kzY84Z7c-NalsYg-t500x500.jpg',
     songImgAlt: 'Imagen del SET SPY 08',
