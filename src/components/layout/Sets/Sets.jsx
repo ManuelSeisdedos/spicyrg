@@ -2,7 +2,7 @@ import './Sets.css'
 import { sets } from '../../../consts/sets.js'
 import AudioPlayer from '../../integrated/AudioPlayer/AudioPlayer.jsx'
 
-function Gallery () {
+function Sets () {
   return (
     <>
       <div className='Sets'>
@@ -14,4 +14,4 @@ function Gallery () {
   )
 }
 
-export default Gallery
+export default Sets

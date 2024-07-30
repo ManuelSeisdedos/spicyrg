@@ -6,8 +6,9 @@ const useAudioPlayer = (songs) => {
   const [songData, setSongData] = useState({})
   const [isReady, setIsReady] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
-  const [currentTime, setCurrentTime] = useState()
-  const [duration, setDuration] = useState()
+  const [onCurrentTimeCalled, setOnCurrentTimeCalled] = useState()
+  const [onDurationCalled, setOnDurationCalled] = useState()
+  const [onErrorCalled, setOnErrorCalled] = useState(false)
 
   const format = (seconds) => {
     const date = new Date(seconds * 1000)
@@ -29,11 +30,11 @@ const useAudioPlayer = (songs) => {
   }
 
   const handleCurrentTime = (value) => {
-    setCurrentTime(value)
+    setOnCurrentTimeCalled(value)
   }
 
   const handleDuration = (value) => {
-    setDuration(value)
+    setOnDurationCalled(value)
   }
 
   const handlePlaying = () => {
@@ -41,6 +42,7 @@ const useAudioPlayer = (songs) => {
   }
 
   const handleNextSong = () => {
+    handleError(false)
     setIsReady(false)
     if (currentIndexSong >= 0 && currentIndexSong < totalSongs - 1) {
       const nextIndexSong = currentIndexSong + 1
@@ -56,6 +58,7 @@ const useAudioPlayer = (songs) => {
   }
 
   const handlePreviousSong = () => {
+    handleError(false)
     setIsReady(false)
     if (currentIndexSong > 0 && currentIndexSong <= totalSongs - 1) {
       const previousIndexSong = currentIndexSong - 1
@@ -70,12 +73,16 @@ const useAudioPlayer = (songs) => {
     }
   }
 
+  const handleError = (value) => {
+    setOnErrorCalled(value)
+  }
+
   useEffect(() => {
     const openingSong = songs.at(0)
     setSongData(openingSong)
   }, [])
 
-  return { isReady, songData, isPlaying, currentTime, duration, format, handleReady, handleCurrentTime, handleDuration, handlePlaying, handleNextSong, handlePreviousSong }
+  return { isReady, songData, isPlaying, onCurrentTimeCalled, onDurationCalled, onErrorCalled, format, handleReady, handleCurrentTime, handleDuration, handlePlaying, handleNextSong, handlePreviousSong, handleError }
 }
 
 export { useAudioPlayer }

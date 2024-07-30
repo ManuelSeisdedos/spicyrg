@@ -4,22 +4,25 @@ import ReactPlayer from 'react-player/soundcloud'
 import Button from '../../core/Button/Button.jsx'
 import Logo from '../../core/Logo/Logo.jsx'
 import List from '../List/List.jsx'
-import LoadingSong from '../LoadingSong/LoadingSong.jsx'
+import LoadingSong from '../../notifications/LoadingSong/LoadingSong.jsx'
+import ErrorLoadingSong from '../../notifications/ErrorLoadingSong/ErrorLoadingSong.jsx'
 
 function AudioPlayer ({ songs }) {
   const {
     isReady,
     songData,
     isPlaying,
-    currentTime,
-    duration,
+    onCurrentTimeCalled,
+    onDurationCalled,
+    onErrorCalled,
     format,
     handleReady,
     handleCurrentTime,
     handleDuration,
     handlePlaying,
     handleNextSong,
-    handlePreviousSong
+    handlePreviousSong,
+    handleError
   } = useAudioPlayer(songs)
 
   const btnsAudioPlayer = [
@@ -56,26 +59,28 @@ function AudioPlayer ({ songs }) {
           className='AudioPlayer' style={{ backgroundImage: `url('src/assets/img/sets/${songData.songBackgroundImg}')` }}
         >
           <div className='AudioPlayer-container'>
-            {isReady
-              ? (
-                <>
-                  <Logo
-                    src={songData.songImgUrl}
-                    alt={songData.songImgAlt}
-                    modifire='audioPlayerSongImg'
-                  />
-                  <div className='AudioPlayer-songInfo'>
-                    <h3 className='AudioPlayer-songName'>{songData.songName}</h3>
-                    <span className='AudioPlayer-artistName'>{songData.artistName}</span>
-                  </div>
-                  <div className='AudioPlayer-time'>
-                    {!currentTime && duration ? (<></>) : (<span className='AudioPlayer-timeSpan'>{currentTime} - {duration}</span>)}
-                  </div>
-                </>
-                )
-              : (
-                <LoadingSong />
-                )}
+            {onErrorCalled
+              ? (<ErrorLoadingSong />)
+              : isReady
+                ? (
+                  <>
+                    <Logo
+                      src={songData.songImgUrl}
+                      alt={songData.songImgAlt}
+                      modifire='audioPlayerSongImg'
+                    />
+                    <div className='AudioPlayer-songInfo'>
+                      <h3 className='AudioPlayer-songName'>{songData.songName}</h3>
+                      <span className='AudioPlayer-artistName'>{songData.artistName}</span>
+                    </div>
+                    <div className='AudioPlayer-time'>
+                      {!onCurrentTimeCalled && onDurationCalled
+                        ? (<></>)
+                        : (<span className='AudioPlayer-timeSpan'>{onCurrentTimeCalled} - {onDurationCalled}</span>)}
+                    </div>
+                  </>
+                  )
+                : (<LoadingSong />)}
             <div className='AudioPlayer-handleAudioPlayer'>
               <List
                 isOrderedInitialization={false}
@@ -105,6 +110,9 @@ function AudioPlayer ({ songs }) {
               }}
               onEnded={() => {
                 handleNextSong()
+              }}
+              onError={() => {
+                handleError(true)
               }}
             />
           </div>

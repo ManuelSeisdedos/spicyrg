@@ -15,7 +15,6 @@ function LoadingSong () {
           <div className='LoadingSong-timeSpan' />
         </div>
       </div>
-
     </>
   )
 }
