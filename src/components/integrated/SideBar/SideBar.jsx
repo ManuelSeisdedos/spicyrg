@@ -1,6 +1,5 @@
 import './SideBar.css'
 import { useSideBar } from '../../../hooks/useSideBar.js'
-
 import { socialMediaItems } from '../../../consts/socialMediaItems.js'
 import Button from '../../core/Button/Button.jsx'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'

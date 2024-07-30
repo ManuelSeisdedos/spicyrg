@@ -1,8 +1,8 @@
 import './EventCard.css'
 import { useEffect, useState } from 'react'
 import { useWindowSize } from '../../../hooks/useWindowSize.js'
-import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 import Button from '../../core/Button/Button.jsx'
+import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 
 function EventCard ({ date, hour, location, ticketUrl }) {
   const { isMobile } = useWindowSize()

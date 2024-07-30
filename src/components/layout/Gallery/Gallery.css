@@ -63,12 +63,8 @@
     cursor: pointer;
     transition: all 250ms ease;
 }
-.Button--galleryLoadMoreBtn:hover {
+.Button--galleryLoadMoreBtn:active {
     color: var(--white-color);
-}
-.Button--galleryLoadMoreBtn:disabled {
-    color: var(--soft-black-disabled-color);
-    background-color: var(--light-mustard-disabled-color);
 }
 @media (min-width: 500px) {
     .UnorderedList--gallery {
@@ -86,5 +82,8 @@
     }
     .Button--galleryLoadMoreBtn{
         height: 50px;
+    }
+    .Button--galleryLoadMoreBtn:hover {
+        color: var(--white-color);
     }
 }

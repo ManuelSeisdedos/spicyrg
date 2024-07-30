@@ -4,8 +4,8 @@ import { useLoadGallery } from '../../../hooks/useLoadGallery.js'
 import { instagramData } from '../../../consts/instagramData.js'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 import Button from '../../core/Button/Button.jsx'
-import NothingToShow from '../../notifications/NothingToShow/NothingToShow.jsx'
 import List from '../../integrated/List/List.jsx'
+import NothingToShow from '../../notifications/NothingToShow/NothingToShow.jsx'
 
 function Gallery () {
   const [socialMediaItem] = useState(instagramData)
@@ -53,7 +53,6 @@ function Gallery () {
                 : (<></>)}
             </>
             )}
-
       </div>
     </>
   )

@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from 'uuid'
+
 const instagramPosts = [
   {
-    uuid: 'a3967f1c-9d86-4ddf-9ee0-696f62bb4abd',
+    uuid: uuidv4(),
     linkTo: 'https://www.instagram.com/p/C48aQEcMvrAC2NTUJsp1p9ZDBrMFFzJlchO0Vw0/',
     isBlankInitialization: true,
     img: 'src/assets/img/instagram/post001.webp',
@@ -8,7 +10,7 @@ const instagramPosts = [
     modifire: 'instagramPost'
   },
   {
-    uuid: 'b3967f1c-9d86-4ddf-9ee0-696f62bb4abd',
+    uuid: uuidv4(),
     linkTo: 'https://www.instagram.com/p/CyQ4gSDsDPmFSFsALnBJet01uJKIJLyEtq4rsA0/',
     isBlankInitialization: true,
     img: 'src/assets/img/instagram/post002.webp',
@@ -16,7 +18,7 @@ const instagramPosts = [
     modifire: 'instagramPost'
   },
   {
-    uuid: 'c3967f1c-9d86-4ddf-9ee0-696f62bb4abd',
+    uuid: uuidv4(),
     linkTo: 'https://www.instagram.com/p/Cv-dPa2vpKh/',
     isBlankInitialization: true,
     img: 'src/assets/img/instagram/post003.webp',
@@ -24,7 +26,7 @@ const instagramPosts = [
     modifire: 'instagramPost'
   },
   {
-    uuid: 'd3967f1c-9d86-4ddf-9ee0-696f62bb4abd',
+    uuid: uuidv4(),
     linkTo: 'https://www.instagram.com/p/CsPHdkYvyq4obCRZwAPXoH97Yu1cCjdTXwk8i80/',
     isBlankInitialization: true,
     img: 'src/assets/img/instagram/post004.webp',
@@ -32,7 +34,7 @@ const instagramPosts = [
     modifire: 'instagramPost'
   },
   {
-    uuid: 'e3967f1c-9d86-4ddf-9ee0-696f62bb4abd',
+    uuid: uuidv4(),
     linkTo: 'https://www.instagram.com/p/ClCmae5MsfG79eP3v1-WMSDzfzJKLKSmYGs_AM0/',
     isBlankInitialization: true,
     img: 'src/assets/img/instagram/post005.webp',
@@ -40,7 +42,7 @@ const instagramPosts = [
     modifire: 'instagramPost'
   },
   {
-    uuid: 'f3967f1c-9d86-4ddf-9ee0-696f62bb4abd',
+    uuid: uuidv4(),
     linkTo: 'https://www.instagram.com/p/Chu5L3MOSxk6jx0Jm7JI_sAx6-qwuXujIO_PYE0/?img_index=2',
     isBlankInitialization: true,
     img: 'src/assets/img/instagram/post006.webp',
@@ -48,7 +50,7 @@ const instagramPosts = [
     modifire: 'instagramPost'
   },
   {
-    uuid: 'g3967f1c-9d86-4ddf-9ee0-696f62bb4abd',
+    uuid: uuidv4(),
     linkTo: 'https://www.instagram.com/p/Cplu7GzspbPFwVRX6X5ocfWyFyUkAX1nvWX-HQ0/',
     isBlankInitialization: true,
     img: 'src/assets/img/instagram/post007.webp',
@@ -56,7 +58,7 @@ const instagramPosts = [
     modifire: 'instagramPost'
   },
   {
-    uuid: 'h3967f1c-9d86-4ddf-9ee0-696f62bb4abd',
+    uuid: uuidv4(),
     linkTo: 'https://www.instagram.com/p/CoyQnQ_szlYiwyi3i2W8qDGiIgyBE-GgZP_bhM0/?img_index=1',
     isBlankInitialization: true,
     img: 'src/assets/img/instagram/post008.webp',
@@ -64,7 +66,7 @@ const instagramPosts = [
     modifire: 'instagramPost'
   },
   {
-    uuid: 'i3967f1c-9d86-4ddf-9ee0-696f62bb4abd',
+    uuid: uuidv4(),
     linkTo: 'https://www.instagram.com/p/CiGelskMWUESUIhSDoy6ikkVfnmYki3visCuO80/?img_index=2',
     isBlankInitialization: true,
     img: 'src/assets/img/instagram/post009.webp',
@@ -72,7 +74,7 @@ const instagramPosts = [
     modifire: 'instagramPost'
   },
   {
-    uuid: 'j3967f1c-9d86-4ddf-9ee0-696f62bb4abd',
+    uuid: uuidv4(),
     linkTo: 'https://www.instagram.com/p/CiGelskMWUESUIhSDoy6ikkVfnmYki3visCuO80/?img_index=1',
     isBlankInitialization: true,
     img: 'src/assets/img/instagram/post010.webp',
@@ -80,7 +82,7 @@ const instagramPosts = [
     modifire: 'instagramPost'
   },
   {
-    uuid: 'k3967f1c-9d86-4ddf-9ee0-696f62bb4abd',
+    uuid: uuidv4(),
     linkTo: 'https://www.instagram.com/p/Chu5L3MOSxk6jx0Jm7JI_sAx6-qwuXujIO_PYE0/?img_index=3',
     isBlankInitialization: true,
     img: 'src/assets/img/instagram/post011.webp',
@@ -88,7 +90,7 @@ const instagramPosts = [
     modifire: 'instagramPost'
   },
   {
-    uuid: 'l3967f1c-9d86-4ddf-9ee0-696f62bb4abd',
+    uuid: uuidv4(),
     linkTo: 'https://www.instagram.com/p/CX68qdJPxPGCX00I4VNxwjDpwcSPMybkEBMllw0/?img_index=1',
     isBlankInitialization: true,
     img: 'src/assets/img/instagram/post012.webp',

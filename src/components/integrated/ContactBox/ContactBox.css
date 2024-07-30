@@ -66,6 +66,11 @@
     cursor: pointer;
     transition: all 250ms ease;
 }
-.Button--contactBoxSendBtn:hover {
+.Button--contactBoxSendBtn:active {
     color: var(--white-color);
+}
+@media (min-width: 500px) {
+    .Button--contactBoxSendBtn:hover {
+        color: var(--white-color);
+    }
 }

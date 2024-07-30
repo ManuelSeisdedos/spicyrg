@@ -1,36 +1,35 @@
 import './ContactBox.css'
-import Button from '../../core/Button/Button'
 import ReCAPTCHA from 'react-google-recaptcha'
-import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import { useRef } from 'react'
+import Button from '../../core/Button/Button'
 
 function ContactBox () {
-
   const SITEKEY = import.meta.env.VITE_SITEKEY_RECAPTCHA
   const EJS_SERV_ID = import.meta.env.VITE_EJS_SERV_ID
   const EJS_TEMP_ID = import.meta.env.VITE_EJS_TEMP_ID
   const EJS_PUBLIC_KEY = import.meta.env.VITE_EJS_PUBLIC_KEY
   const form = useRef()
-  
+
   const handleChange = (e) => {
-    console.log(e);
+    console.log(e)
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    
+    e.preventDefault()
+
     emailjs.sendForm(EJS_SERV_ID, EJS_TEMP_ID, form.current, {
-        publicKey: EJS_PUBLIC_KEY,
-      })
+      publicKey: EJS_PUBLIC_KEY
+    })
       .then(
         () => {
-          console.log('SUCCESS!', form.current);
+          console.log('SUCCESS!', form.current)
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-  };
+          console.log('FAILED...', error.text)
+        }
+      )
+  }
 
   return (
     <>
@@ -44,6 +43,7 @@ function ContactBox () {
               name='name'
               id='name'
               placeholder='Nombre Completo'
+              autoComplete='off'
               required
             />
             <input
@@ -52,6 +52,7 @@ function ContactBox () {
               name='email'
               id='email'
               placeholder='@email.com'
+              autoComplete='off'
               required
             />
           </div>
@@ -67,7 +68,7 @@ function ContactBox () {
             />
           </div>
           <div>
-            <ReCAPTCHA sitekey={SITEKEY} onChange={handleChange} theme='dark'/>
+            <ReCAPTCHA sitekey={SITEKEY} onChange={handleChange} theme='dark' />
           </div>
           <div className='ContactBox-sendBtn'>
             <Button

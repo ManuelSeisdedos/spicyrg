@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from 'uuid'
+
 const instagramData =
   {
-    uuid: crypto.randomUUID(),
+    uuid: uuidv4(),
     linkTo: 'https://www.instagram.com/spicy.rg',
     text: 'spicy.rg',
     img: 'src/assets/img/icons/instagram-m-icon.svg',

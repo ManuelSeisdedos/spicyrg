@@ -1,7 +1,7 @@
 import './Events.css'
-import NothingToShow from '../../notifications/NothingToShow/NothingToShow.jsx'
 import List from '../../integrated/List/List.jsx'
 import EventCard from '../../integrated/EventCard/EventCard.jsx'
+import NothingToShow from '../../notifications/NothingToShow/NothingToShow.jsx'
 
 function Events ({ events }) {
   return (

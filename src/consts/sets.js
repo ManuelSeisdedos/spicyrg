@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from 'uuid'
+
 const sets = [
   {
-    uuid: crypto.randomUUID(),
+    uuid: uuidv4(),
     songBackgroundImg: 'set07.webp',
     songUrl: 'https://soundcloud.com/araceliriogonzalez/set-psy-07/',
     songImgUrl: 'https://i1.sndcdn.com/artworks-yYoAB5yKeloYxy03-WqXi4g-t500x500.jpg',
@@ -9,7 +11,7 @@ const sets = [
     artistName: 'Spicy'
   },
   {
-    uuid: crypto.randomUUID(),
+    uuid: uuidv4(),
     songBackgroundImg: 'set08.webp',
     songUrl: 'https://soundcloud.com/araceliriogonzalez/set-psy-08/',
     songImgUrl: 'https://i1.sndcdn.com/artworks-jKaErXD4kzY84Z7c-NalsYg-t500x500.jpg',

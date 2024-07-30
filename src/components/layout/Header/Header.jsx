@@ -1,11 +1,11 @@
 import './Header.css'
+import { useEffect, useState } from 'react'
 import { useWindowSize } from '../../../hooks/useWindowSize.js'
 import { useHideOnScroll } from '../../../hooks/useHideOnScroll.js'
 import { navItems } from '../../../consts/navItems.js'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 import Nav from '../../integrated/Nav/Nav.jsx'
 import SideBar from '../../integrated/SideBar/SideBar.jsx'
-import { useEffect, useState } from 'react'
 
 function Header () {
   const { isMobile } = useWindowSize()

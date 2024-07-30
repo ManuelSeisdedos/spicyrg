@@ -69,7 +69,7 @@
     margin: 0 1rem;
     border-radius: 10px;
 }
-.LinkTo--eventCardTicketLink:hover {
+.LinkTo--eventCardTicketLink:active {
     color: var(--white-color);
     background-color: var(--red-spicy-color);
 }
@@ -109,6 +109,10 @@
     .EventCard-iframe.is-open {
         margin: 25px 0 25px 0;
         height: 205px;
+    }
+    .LinkTo--eventCardTicketLink:hover {
+        color: var(--white-color);
+        background-color: var(--red-spicy-color);
     }
 }
 @media (min-width: 800px) {
@@ -153,45 +157,8 @@
         margin: 25px 0 25px 0;
         height: 205px;
     }
+    .LinkTo--eventCardTicketLink:hover {
+        color: var(--white-color);
+        background-color: var(--red-spicy-color);
+    }
 }
-
-/* .EventCard {
-    width: 100%;
-}
-.EventCard-border {
-    width: max-content;
-    padding: 0 0 20px 0;
-    border-top: none;
-}
-.EventCard-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.EventCard-date {
-    margin-bottom: 0;
-    margin-right: 30px;
-}
-.EventCard-list--info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-.EventCard-item--info p {
-    width: max-content;
-}
-.EventCard-clicks {
-    margin-left: 30px;
-}
-.EventCard-list--clicks {
-    justify-content: center;
-    gap: 30px;
-}
-.LinkTo--eventCardTicketLink {
-    margin: 0;
-}
-.EventCard-iframe.is-open {
-    margin: 25px 0 25px 0;
-    height: 205px;
-} */

@@ -1,6 +1,6 @@
 import './Banner.css'
-import Logo from '../../core/Logo/Logo.jsx'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'
+import Logo from '../../core/Logo/Logo.jsx'
 
 function Banner ({ slogan }) {
   return (

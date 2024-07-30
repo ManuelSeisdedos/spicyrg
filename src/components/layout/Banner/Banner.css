@@ -41,7 +41,7 @@
     border-radius: 2rem;
     transition: all 250ms ease;
 }
-.LinkTo--bannerLinkToEvents:hover {
+.LinkTo--bannerLinkToEvents:active {
     color: var(--white-color);
 }
 @media (min-width: 500px) {
@@ -66,5 +66,8 @@
         height: 2rem;
         padding: 1rem 2rem;
         border-radius: 50px;
+    }
+    .LinkTo--bannerLinkToEvents:hover {
+        color: var(--white-color);
     }
 }

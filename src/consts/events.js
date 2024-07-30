@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from 'uuid'
+
 const events = [
   {
-    uuid: crypto.randomUUID(),
+    uuid: uuidv4(),
     date: 'FEB 12/25',
     hour: '23:59hs',
     location: {
@@ -19,7 +21,7 @@ const events = [
     ticketUrl: 'https://www.google.com/'
   },
   {
-    uuid: crypto.randomUUID(),
+    uuid: uuidv4(),
     date: 'FEB 12/25',
     hour: '23:59hs',
     location: {
@@ -38,7 +40,7 @@ const events = [
     ticketUrl: 'https://www.google.com/'
   },
   {
-    uuid: crypto.randomUUID(),
+    uuid: uuidv4(),
     date: 'FEB 12/25',
     hour: '23:59hs',
     location: {
@@ -57,7 +59,7 @@ const events = [
     ticketUrl: 'https://www.google.com/'
   },
   {
-    uuid: crypto.randomUUID(),
+    uuid: uuidv4(),
     date: 'FEB 12/25',
     hour: '23:59hs',
     location: {
@@ -76,7 +78,7 @@ const events = [
     ticketUrl: 'https://www.google.com/'
   },
   {
-    uuid: crypto.randomUUID(),
+    uuid: uuidv4(),
     date: 'FEB 12/25',
     hour: '23:59hs',
     location: {
@@ -95,7 +97,7 @@ const events = [
     ticketUrl: 'https://www.google.com/'
   },
   {
-    uuid: crypto.randomUUID(),
+    uuid: uuidv4(),
     date: 'FEB 12/25',
     hour: '23:59hs',
     location: {

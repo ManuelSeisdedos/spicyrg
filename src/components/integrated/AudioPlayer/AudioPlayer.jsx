@@ -1,6 +1,8 @@
 import './AudioPlayer.css'
-import { useAudioPlayer } from '../../../hooks/useAudioPlayer.js'
+import { memo, useMemo } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import ReactPlayer from 'react-player/soundcloud'
+import { useAudioPlayer } from '../../../hooks/useAudioPlayer.js'
 import Button from '../../core/Button/Button.jsx'
 import Logo from '../../core/Logo/Logo.jsx'
 import List from '../List/List.jsx'
@@ -25,9 +27,9 @@ function AudioPlayer ({ songs }) {
     handleError
   } = useAudioPlayer(songs)
 
-  const btnsAudioPlayer = [
+  const btnsAudioPlayer = useMemo(() => [
     {
-      uuid: crypto.randomUUID(),
+      uuid: uuidv4(),
       img: 'src/assets/img/icons/izquierda-reproductor-icon.svg',
       imgAlt: 'Boton para ir a la anterior cancion',
       handleClick: handlePreviousSong,
@@ -35,7 +37,7 @@ function AudioPlayer ({ songs }) {
       modifire: 'audioPlayerPreviousBtn'
     },
     {
-      uuid: crypto.randomUUID(),
+      uuid: uuidv4(),
       img: !isPlaying ? 'src/assets/img/icons/play-icon.svg' : 'src/assets/img/icons/pause-icon.svg',
       imgAlt: 'Boton para reproducir o pausar cancion',
       handleClick: handlePlaying,
@@ -43,14 +45,34 @@ function AudioPlayer ({ songs }) {
       modifire: 'audioPlayerPlayingBtn'
     },
     {
-      uuid: crypto.randomUUID(),
+      uuid: uuidv4(),
       img: 'src/assets/img/icons/derecha-reproductor-icon.svg',
       imgAlt: 'Boton para ir a la siguiente cancion',
       handleClick: handleNextSong,
       disabled: false,
       modifire: 'audioPlayerNextBtn'
     }
-  ]
+  ], [handlePreviousSong, handlePlaying, isPlaying, handleNextSong])
+
+  const playerConfig = useMemo(() => ({
+    url: songData?.songUrl,
+    width: '0px',
+    height: '0px',
+    style: { display: 'none' },
+    playing: !!isPlaying,
+    volume: 0.7,
+    onReady: () => { handleReady(true) },
+    onProgress: (progress) => {
+      const formatProgress = format(progress.playedSeconds)
+      handleCurrentTime(formatProgress)
+    },
+    onDuration: (duration) => {
+      const formatDuration = format(duration)
+      handleDuration(formatDuration)
+    },
+    onEnded: handleNextSong,
+    onError: () => { handleError(true) }
+  }), [songData, isPlaying, handleReady, format, handleCurrentTime, handleDuration, handleNextSong, handleError])
 
   return (
     <>
@@ -91,29 +113,7 @@ function AudioPlayer ({ songs }) {
               </List>
             </div>
             <ReactPlayer
-              url={songData.songUrl}
-              width='0px'
-              height='0px'
-              style={{ display: 'none' }}
-              playing={!!isPlaying}
-              volume={0.7}
-              onReady={() => {
-                handleReady(true)
-              }}
-              onProgress={(progress) => {
-                const formatProgress = format(progress.playedSeconds)
-                handleCurrentTime(formatProgress)
-              }}
-              onDuration={(duration) => {
-                const formatDuration = format(duration)
-                handleDuration(formatDuration)
-              }}
-              onEnded={() => {
-                handleNextSong()
-              }}
-              onError={() => {
-                handleError(true)
-              }}
+              {...playerConfig}
             />
           </div>
         </div>
@@ -122,4 +122,4 @@ function AudioPlayer ({ songs }) {
   )
 }
 
-export default AudioPlayer
+export default memo(AudioPlayer)
