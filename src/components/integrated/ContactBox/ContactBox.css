@@ -52,7 +52,9 @@
 .ContactBox-textarea:focus {
     outline: 2px solid var(--red-spicy-color);
 }
-
+.ContactBox-reCaptcha {
+    margin: 0.5rem 0 1.5rem 0;
+}
 .Button--contactBoxSendBtn {
     font-family: var(--bold-font);
     font-size: 1rem;

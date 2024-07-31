@@ -1,7 +1,7 @@
 import './ContactBox.css'
+import { useRef, useState } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 import emailjs from '@emailjs/browser'
-import { useRef } from 'react'
 import Button from '../../core/Button/Button'
 
 function ContactBox () {
@@ -10,25 +10,31 @@ function ContactBox () {
   const EJS_TEMP_ID = import.meta.env.VITE_EJS_TEMP_ID
   const EJS_PUBLIC_KEY = import.meta.env.VITE_EJS_PUBLIC_KEY
   const form = useRef()
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false)
+  const [isSucces, setIsSucces] = useState(false)
 
   const handleChange = (e) => {
-    console.log(e)
+    e === null ? setIsCaptchaVerified(false) : setIsCaptchaVerified(true)
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    emailjs.sendForm(EJS_SERV_ID, EJS_TEMP_ID, form.current, {
-      publicKey: EJS_PUBLIC_KEY
-    })
-      .then(
-        () => {
-          console.log('SUCCESS!', form.current)
-        },
-        (error) => {
-          console.log('FAILED...', error.text)
-        }
-      )
+    if (isCaptchaVerified) {
+      emailjs.sendForm(EJS_SERV_ID, EJS_TEMP_ID, form.current, {
+        publicKey: EJS_PUBLIC_KEY
+      })
+        .then(
+          () => {
+            console.log('SUCCESS!', form.current)
+            setIsSucces(true)
+          },
+          (error) => {
+            console.log('FAILED...', error.text)
+            setIsSucces(false)
+          }
+        )
+    }
   }
 
   return (
@@ -67,7 +73,7 @@ function ContactBox () {
               required
             />
           </div>
-          <div>
+          <div className='ContactBox-reCaptcha'>
             <ReCAPTCHA sitekey={SITEKEY} onChange={handleChange} theme='dark' />
           </div>
           <div className='ContactBox-sendBtn'>
