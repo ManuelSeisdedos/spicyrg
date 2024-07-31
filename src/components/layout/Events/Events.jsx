@@ -11,7 +11,7 @@ function Events ({ events }) {
         {!events.length > 0
           ? (
             <NothingToShow
-              message='¡Ups! No hay eventos disponibles...'
+              message='No hay eventos disponibles...'
               modifire='eventsNothingToShow'
             />
             )

@@ -71,6 +71,16 @@
 .Button--contactBoxSendBtn:active {
     color: var(--white-color);
 }
+.ContactBox-notificationBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
+    margin: 0.5rem 0 1rem 0;
+}
+.ContactBox-notification {
+    color: var(--light-mustard-color);
+}
 @media (min-width: 500px) {
     .Button--contactBoxSendBtn:hover {
         color: var(--white-color);

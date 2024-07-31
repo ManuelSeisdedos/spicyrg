@@ -4,9 +4,7 @@
     align-items: center;
 }
 .NothingToShow-message {
-    font-family: var(--bold-font);
-    color: var(--soft-black-color);
-    background-color: #ffffffbd;
+
     text-align: center;
     padding: 1rem;
     border-radius: 10px;

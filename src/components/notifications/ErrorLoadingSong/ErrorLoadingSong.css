@@ -9,6 +9,7 @@
 }
 .ErrorLoadingSong-img {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 250px;
@@ -16,11 +17,14 @@
     background: linear-gradient(0deg, #57080c, var(--red-spicy-color));
     border-radius: 10px;
 }
+.ErrorLoadingSong-errorTitle {
+    color: #fff;
+}
 .ErrorLoadingSong-errorMessage {
-    font-family: var(--bold-font);
+    font-family: var(--regular-font);
     font-size: 1rem;
     text-align: center;
-    color: #2c0204;
+    color: #fff;
     padding: 1rem;
 }
 .ErrorLoadingSong-songName {

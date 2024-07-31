@@ -11,7 +11,7 @@ function ContactBox () {
   const EJS_PUBLIC_KEY = import.meta.env.VITE_EJS_PUBLIC_KEY
   const form = useRef()
   const [isCaptchaVerified, setIsCaptchaVerified] = useState(false)
-  const [isSucces, setIsSucces] = useState(false)
+  const [isSucces, setIsSucces] = useState()
 
   const handleChange = (e) => {
     e === null ? setIsCaptchaVerified(false) : setIsCaptchaVerified(true)
@@ -76,6 +76,13 @@ function ContactBox () {
           <div className='ContactBox-reCaptcha'>
             <ReCAPTCHA sitekey={SITEKEY} onChange={handleChange} theme='dark' />
           </div>
+          {/* <div className='ContactBox-notificationBox'>
+            {!isCaptchaVerified
+              ? (<span className='ContactBox-notification ContactBox-notification--reCaptcha'>¡Realiza la Verificación ReCaptcha para enviar la consulta!</span>)
+              : !isSucces
+                  ? (<span className='ContactBox-notification ContactBox-notification--error'>¡Algo ha fallado al intentar enviar la consulta!</span>)
+                  : (<span className='ContactBox-notification ContactBox-notification--succes'>¡Consulta enviada con éxito!</span>)}
+          </div> */}
           <div className='ContactBox-sendBtn'>
             <Button
               text='Enviar'

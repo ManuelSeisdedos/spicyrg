@@ -27,7 +27,7 @@ function Gallery () {
         {!gallery.length > 0
           ? (
             <NothingToShow
-              message='¡Ups! No hay imagenes disponibles...'
+              message='No hay imagenes disponibles...'
               modifire='galleryNothingToShow'
             />
             )

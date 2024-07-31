@@ -6,7 +6,8 @@ function ErrorLoadingSong () {
       <div className='ErrorLoadingSong'>
         <div className='ErrorLoadingSong-songImg'>
           <div className='ErrorLoadingSong-img'>
-            <span className='ErrorLoadingSong-errorMessage'>¡Ups! Hubo un error al intentar cargar la canción.</span>
+            <h3 className='ErrorLoadingSong-errorTitle'>¡UPS!</h3>
+            <span className='ErrorLoadingSong-errorMessage'> Hubo un problema al intentar cargar la canción</span>
           </div>
         </div>
         <div className='ErrorLoadingSong-songInfo'>
