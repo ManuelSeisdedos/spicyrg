@@ -1,0 +1,164 @@
+.EventCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 328px;
+}
+.EventCard-border {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 10px 0;
+    border-top: 2px solid var(--soft-black-color);
+    border-bottom: 2px solid var(--soft-black-color);
+}
+.EventCard-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.EventCard-list {
+    list-style: none;
+}
+.EventCard-list--clicks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.EventCard-googleMapsLocation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.EventCard-iframe {
+    width: 100dvw;
+    height: 0;
+    border: none;
+    visibility: hidden;
+    transition: all 500ms ease;
+}
+.EventCard-iframe.is-open {
+    height: 150px;
+    visibility: visible;
+}
+
+.EventCard-date {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.EventCard-item--info {
+    font-family: var(--regular-font);
+    font-size: 12px;
+}
+.Button--eventCardLocationBtn {
+    cursor: pointer;
+}
+.LinkTo--eventCardTicketLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    font-family: var(--bold-font);
+    font-size: 12px;
+    color: var(--light-mustard-color);
+    background-color: var(--soft-black-color);
+    margin: 0 1rem;
+    border-radius: 10px;
+}
+.LinkTo--eventCardTicketLink:active {
+    color: var(--white-color);
+    background-color: var(--red-spicy-color);
+}
+
+@media (min-width: 500px) {
+    .EventCard {
+        width: 100%;
+        max-width: 500px;
+    }
+    .EventCard-border {
+        width: max-content;
+        padding: 0 0 20px 0;
+        border-top: none;
+    }
+    .EventCard-date {
+        margin-bottom: 0.5rem;
+    }
+    .EventCard-list--info {
+        display: grid;
+        grid: auto / 110px 45px 120px;
+        justify-items: center;
+        gap: 30px;
+    }
+    .EventCard-item--info p {
+        width: 100%;
+    }
+    .EventCard-clicks {
+        margin-left: 30px;
+    }
+    .EventCard-list--clicks {
+        justify-content: center;
+        gap: 30px;
+    }
+    .LinkTo--eventCardTicketLink {
+        margin: 0;
+    }
+    .EventCard-iframe.is-open {
+        margin: 25px 0 25px 0;
+        height: 205px;
+    }
+    .LinkTo--eventCardTicketLink:hover {
+        color: var(--white-color);
+        background-color: var(--red-spicy-color);
+    }
+}
+@media (min-width: 800px) {
+    .EventCard {
+        width: 100%;
+        max-width: 630px;
+    }
+    .EventCard-border {
+        width: max-content;
+        padding: 0 0 20px 0;
+        border-top: none;
+    }
+    .EventCard-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .EventCard-date {
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+    .EventCard-list--info {
+        display: grid;
+        grid: auto / 130px 45px 130px;
+        justify-items: center;
+        gap: 30px;
+    }
+    .EventCard-item--info p {
+        width: 100%;
+    }
+    .EventCard-clicks {
+        margin-left: 30px;
+    }
+    .EventCard-list--clicks {
+        justify-content: center;
+        gap: 30px;
+    }
+    .LinkTo--eventCardTicketLink {
+        margin: 0;
+    }
+    .EventCard-iframe.is-open {
+        margin: 25px 0 25px 0;
+        height: 205px;
+    }
+    .LinkTo--eventCardTicketLink:hover {
+        color: var(--white-color);
+        background-color: var(--red-spicy-color);
+    }
+}

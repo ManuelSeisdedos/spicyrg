@@ -1,0 +1,17 @@
+.Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--soft-black-color);
+}
+
+.UnorderedList--footerSocialMedia {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0 1rem 0;
+}
+
+.UnorderedList-item--footerSocialMedia>.LinkTo--contact span {
+    display: none;
+}

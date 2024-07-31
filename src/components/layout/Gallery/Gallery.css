@@ -1,0 +1,89 @@
+.Gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--soft-black-color);
+    padding: 1rem 1rem 0rem 1rem;
+}
+.Gallery-title {
+    margin: 1rem ;
+    color: var(--light-mustard-color);
+}
+.Gallery-linkToSocialMedia {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 2rem;
+}
+.NothingToShow-message--galleryNothingToShow {
+    font-family: var(--bold-font);
+    color: var(--light-mustard-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.UnorderedList--gallery {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            127px,
+            127px
+        )
+    );
+    max-width: 1000px;
+}
+.LinkTo--galleryLinkToSocialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-mustard-color); 
+}
+.LinkTo-img--instagramPost {
+    width: 127px;
+    height: 127px;
+}
+.Button--galleryLoadMoreBtn{
+    font-family: var(--bold-font);
+    font-size: 20px;
+    width: 200px;
+    height: 49px;
+    color: var(--soft-black-color);
+    background-color: var(--light-mustard-color);
+    margin-top: 2rem;
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+.Button--galleryLoadMoreBtn:active {
+    color: var(--white-color);
+}
+@media (min-width: 500px) {
+    .UnorderedList--gallery {
+        grid-template-columns: repeat(
+            3,
+            minmax(
+                216px,
+                216px
+            )
+        );
+    }
+    .LinkTo-img--instagramPost {
+        width: 216px;
+        height: 216px;
+    }
+    .Button--galleryLoadMoreBtn{
+        height: 50px;
+    }
+    .Button--galleryLoadMoreBtn:hover {
+        color: var(--white-color);
+    }
+}

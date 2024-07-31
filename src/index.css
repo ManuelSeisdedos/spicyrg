@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('./assets/fonts/Roboto/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('./assets/fonts/Roboto/Roboto-Light.ttf');
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('./assets/fonts/Roboto/Roboto-Regular.ttf');
+}
+:root {
+    --regular-font: 'Roboto-Regular';
+    --light-font: 'Roboto-Light';
+    --bold-font: 'Roboto-Bold';
+    --white-color: #fff;
+    --light-gray-color: #ddd;
+    --red-spicy-color: #EA1821;
+    --soft-black-color: #1B1D1C;
+    --light-mustard-color: #C4C393;
+    --light-mustard-transparent-color: #c4c393d5;
+}
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    scroll-behavior: smooth;
+}
+#root {
+    font-family: var(--regular-font);
+    background-color: var(--soft-black-color);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--bold-font); 
+    font-size: 45px;
+    color: var(--soft-black-color);
+}
+.no-scroll {
+    overflow: hidden;
+}

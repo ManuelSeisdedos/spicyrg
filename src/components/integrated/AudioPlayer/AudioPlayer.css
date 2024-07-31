@@ -1,0 +1,82 @@
+.AudioPlayer {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-items: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100dvh;
+}
+.AudioPlayer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 425px;
+    border-radius: 10px;
+    background-color: var(--light-mustard-transparent-color);
+}
+.Logo-img--audioPlayerSongImg {
+    width: 250px;
+    height: 243px;
+}
+.AudioPlayer-songInfo {
+    width: 250px;
+    padding: 0.5rem 0;
+}
+.AudioPlayer-songName {
+    font-size: 30px;
+}
+.AudioPlayer-artistName {
+    font-family: var(--regular-font);
+    font-size: 14px;
+    color: var(--soft-black-color);
+}
+.AudioPlayer-handleAudioPlayer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.AudioPlayer-timeSpan {
+    font-family: var(--regular-font);
+    font-size: 1rem;
+    color: var(--soft-black-color);
+}
+.UnorderedList--audioPlayerBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-top: 0.5rem;
+    gap: 0.2rem;
+}
+.Button--audioPlayerPlayingBtn {
+    padding: 0.6rem 0.6rem 0.4rem 0.6rem;
+    cursor: pointer;
+    transition: 300ms ease-out;
+}
+.Button--audioPlayerPlayingBtn:hover {
+    background-color: #ffffff2a;
+    border-radius: 2rem;
+}
+.Button--audioPlayerPreviousBtn {
+    padding: 0.6rem 0.6rem 0.4rem 0.4rem;
+    cursor: pointer;
+    transition: 300ms ease-out;
+}
+.Button--audioPlayerPreviousBtn:hover {
+    background-color: #ffffff2a;
+    border-radius: 2rem;
+}
+.Button--audioPlayerNextBtn {
+    padding: 0.6rem 0.4rem 0.4rem 0.6rem;
+    cursor: pointer;
+    transition: 300ms ease-out;
+}
+.Button--audioPlayerNextBtn:hover {
+    background-color: #ffffff2a;
+    border-radius: 2rem;
+}

@@ -1,0 +1,53 @@
+@keyframes linearGradientAnimation {
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
+.ErrorLoadingSong{
+    display: flex;
+    flex-direction: column;
+}
+.ErrorLoadingSong-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 243px;
+    background: linear-gradient(0deg, #57080c, var(--red-spicy-color));
+    border-radius: 10px;
+}
+.ErrorLoadingSong-errorTitle {
+    color: #fff;
+}
+.ErrorLoadingSong-errorMessage {
+    font-family: var(--regular-font);
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+}
+.ErrorLoadingSong-songName {
+    width: 10rem;
+    height: 1.5rem;
+    background: linear-gradient(45deg, #57080c, var(--red-spicy-color));
+    margin: 0.8rem 0;
+    border-radius: 10px;
+}
+.ErrorLoadingSong-artistName {
+    width: 3rem;
+    height: 1rem;
+    background: linear-gradient(45deg, #57080c, var(--red-spicy-color));
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 10px;
+}
+.ErrorLoadingSong-time {
+    display: flex;
+    justify-content: center;
+}
+.ErrorLoadingSong-timeSpan {
+    width: 6rem;
+    height: 1rem;
+    background: linear-gradient(45deg, #57080c, var(--red-spicy-color));
+    border-radius: 10px;
+}

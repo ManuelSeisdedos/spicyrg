@@ -1,0 +1,88 @@
+.ContactBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ContactBox-title {
+    color: var(--light-mustard-color);
+    margin: 1rem 0;
+}
+.ContactBox-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ContactBox-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--soft-black-color);
+}
+.ContactBox-input {
+    font-family: var(--regular-font);
+    background-color: var(--light-gray-color);
+    color: var(--soft-black-color);
+    width: 16rem;
+    height: 2rem;
+    margin-bottom: 0.8rem;
+    padding: 0 0.5rem;
+    border: none;
+    border-radius: 0.6rem;
+    outline: none;
+}
+.ContactBox-input:focus{
+    outline: 2px solid var(--red-spicy-color);
+}
+.ContactBox-textarea {
+    font-family: var(--regular-font);
+    background-color: var(--light-gray-color);
+    color: var(--soft-black-color);
+    width: 16rem;
+    height: 12rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.6rem;
+    outline: none;
+    resize: none;
+}
+.ContactBox-textarea:focus {
+    outline: 2px solid var(--red-spicy-color);
+}
+.ContactBox-reCaptcha {
+    margin: 0.5rem 0 1.5rem 0;
+}
+.Button--contactBoxSendBtn {
+    font-family: var(--bold-font);
+    font-size: 1rem;
+    width: 110px;
+    height: 40px;
+    background-color: var(--light-mustard-color);
+    color: var(--soft-black-color);
+    margin-bottom: 2rem;
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+.Button--contactBoxSendBtn:active {
+    color: var(--white-color);
+}
+.ContactBox-notificationBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
+    margin: 0.5rem 0 1rem 0;
+}
+.ContactBox-notification {
+    color: var(--light-mustard-color);
+}
+@media (min-width: 500px) {
+    .Button--contactBoxSendBtn:hover {
+        color: var(--white-color);
+    }
+}

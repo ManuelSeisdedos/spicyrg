@@ -1,9 +1,10 @@
 import './App.css'
+import OnlyPage from './pages/OnlyPage.jsx'
 
-function App() {
+function App () {
   return (
     <>
-      
+      <OnlyPage />
     </>
   )
 }

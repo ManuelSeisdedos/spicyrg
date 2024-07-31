@@ -1,0 +1,73 @@
+.Banner {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-items: center;
+    background-image: url("src/assets/img/principal.webp");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100dvh;
+}
+.Banner-logoAndText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Logo--banner { 
+    width: 340px;
+    height: 155px;
+    margin: 5rem 0 1rem 0;
+}
+.Banner-p {
+    width: 220px;
+    font-family: var(--light-font);
+    font-size: 1rem;
+    text-align: center;
+    color: var(--white-color);
+}
+.Banner-linkToEvents {
+    margin-top: -4rem;
+}
+.LinkTo--bannerLinkToEvents {
+    align-self: end;
+    font-family: var(--bold-font);
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    color: var(--soft-black-color);
+    background-color: var(--light-mustard-color);
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    transition: all 250ms ease;
+}
+.LinkTo--bannerLinkToEvents:active {
+    color: var(--white-color);
+}
+@media (min-width: 500px) {
+    .Banner {
+        height: 100dvh;
+    }
+    .Logo--banner { 
+        width: 440px;
+        height: 240px;
+    }
+    .Banner-linkToEvents {
+        margin-top: -8rem;
+    }
+    .Banner-p {
+        width: 300px;
+        font-size: 1.1rem;
+        margin-top: -2rem;
+    }
+    .LinkTo--bannerLinkToEvents {
+        font-size: 1.5rem;
+        width: 265px;
+        height: 2rem;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+    }
+    .LinkTo--bannerLinkToEvents:hover {
+        color: var(--white-color);
+    }
+}
