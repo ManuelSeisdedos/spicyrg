@@ -80,7 +80,7 @@ function AudioPlayer ({ songs }) {
 
   return (
     <>
-      {songData && (
+      {songData && songData.songBackgroundImg && (
         <div
           className='AudioPlayer' style={{ backgroundImage: `url(${songData.songBackgroundImg})` }}
         >
