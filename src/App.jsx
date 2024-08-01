@@ -1,3 +1,4 @@
+import './assets'
 import './App.css'
 import OnlyPage from './pages/OnlyPage.jsx'
 
