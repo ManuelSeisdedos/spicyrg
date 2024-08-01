@@ -1,5 +1,6 @@
 import './EventCard.css'
 import mapsIcon from '../../../assets/img/icons/maps-icon.svg'
+import mapsActivoIcon from '../../../assets/img/icons/maps-activado-icon.svg'
 import { useEffect, useState } from 'react'
 import { useWindowSize } from '../../../hooks/useWindowSize.js'
 import Button from '../../core/Button/Button.jsx'
@@ -57,7 +58,7 @@ function EventCard ({ date, hour, location, ticketUrl }) {
                   {!isMobile
                     ? (
                       <Button
-                        img={!isOpen ? 'src/assets/img/icons/maps-icon.svg' : 'src/assets/img/icons/maps-activado-icon.svg'}
+                        img={!isOpen ? mapsIcon : mapsActivoIcon}
                         handleClick={handleClick}
                         modifire='eventCardLocationBtn'
                       />

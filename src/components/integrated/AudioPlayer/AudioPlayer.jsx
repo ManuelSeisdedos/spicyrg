@@ -82,7 +82,7 @@ function AudioPlayer ({ songs }) {
     <>
       {songData && (
         <div
-          className='AudioPlayer' style={{ backgroundImage: `url('../../../assets/img/sets/${songData.songBackgroundImg}')` }}
+          className='AudioPlayer' style={{ backgroundImage: `url(${songData.songBackgroundImg})` }}
         >
           <div className='AudioPlayer-container'>
             {onErrorCalled
