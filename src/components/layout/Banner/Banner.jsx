@@ -1,5 +1,4 @@
 import './Banner.css'
-import banner from '../../../assets/img/principal.webp'
 import spicyLogo from '../../../assets/img/spicy-logo.svg'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 import Logo from '../../core/Logo/Logo.jsx'
@@ -7,7 +6,7 @@ import Logo from '../../core/Logo/Logo.jsx'
 function Banner ({ slogan }) {
   return (
     <>
-      <div className='Banner' style={{ backgroundImage: `url(${banner})` }}>
+      <div className='Banner'>
         <div className='Banner-logoAndText'>
           <Logo
             src={spicyLogo}
