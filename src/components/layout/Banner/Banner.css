@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: 1fr auto;
     justify-items: center;
-    background-image: url("src/assets/img/principal.webp");
+    background-image: url("../../../assets/img/principal.webp");
     background-size: cover;
     background-position: center;
     width: 100%;

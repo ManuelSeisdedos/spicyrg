@@ -1,4 +1,5 @@
 import './EventCard.css'
+import mapsIcon from '../../../assets/img/icons/maps-icon.svg'
 import { useEffect, useState } from 'react'
 import { useWindowSize } from '../../../hooks/useWindowSize.js'
 import Button from '../../core/Button/Button.jsx'
@@ -65,7 +66,7 @@ function EventCard ({ date, hour, location, ticketUrl }) {
                       <LinkTo
                         linkTo={location.googleMapsLink}
                         isBlankInitialization
-                        img='src/assets/img/icons/maps-icon.svg'
+                        img={mapsIcon}
                         modifire='eventCardLocationLink'
                       />
                       )}
