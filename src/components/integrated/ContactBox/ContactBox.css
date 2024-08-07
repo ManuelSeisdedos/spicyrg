@@ -19,6 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: none;
     color: var(--soft-black-color);
 }
 .ContactBox-input {
@@ -35,6 +36,9 @@
 }
 .ContactBox-input:focus{
     outline: 2px solid var(--red-spicy-color);
+}
+.ContactBox-message {
+    border: none;
 }
 .ContactBox-textarea {
     font-family: var(--regular-font);

@@ -7,6 +7,7 @@ const instagramData =
     linkTo: 'https://www.instagram.com/spicy.rg',
     text: 'spicy.rg',
     img: instagramMIcon,
+    imgAlt: 'Icono de Instagram',
     isBlankInitialization: true,
     modifire: 'contact'
   }

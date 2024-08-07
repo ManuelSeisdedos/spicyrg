@@ -21,6 +21,7 @@ function Gallery () {
             isBlankInitialization
             text={socialMediaItem.text}
             img={socialMediaItem.img}
+            imgAlt='Icono de Instagram'
             modifire='galleryLinkToSocialMedia'
           />
         </div>

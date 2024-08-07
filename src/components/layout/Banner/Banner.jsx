@@ -1,5 +1,5 @@
 import './Banner.css'
-import spicyLogo from '../../../assets/img/spicy-logo.svg'
+import spicyLogo from '/spicy-logo.svg'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 import Logo from '../../core/Logo/Logo.jsx'
 

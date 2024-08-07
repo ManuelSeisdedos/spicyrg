@@ -20,7 +20,7 @@ function EventCard ({ date, hour, location, ticketUrl }) {
 
   return (
     <>
-      <div className='EventCard'>
+      <section className='EventCard'>
         <div className='EventCard-border'>
           <div className='EventCard-container'>
             <div className='EventCard-info'>
@@ -59,6 +59,7 @@ function EventCard ({ date, hour, location, ticketUrl }) {
                     ? (
                       <Button
                         img={!isOpen ? mapsIcon : mapsActivoIcon}
+                        imgAlt='Icono de ubicación'
                         handleClick={handleClick}
                         modifire='eventCardLocationBtn'
                       />
@@ -68,6 +69,7 @@ function EventCard ({ date, hour, location, ticketUrl }) {
                         linkTo={location.googleMapsLink}
                         isBlankInitialization
                         img={mapsIcon}
+                        imgAlt='Icono de ubicación'
                         modifire='eventCardLocationLink'
                       />
                       )}
@@ -96,7 +98,7 @@ function EventCard ({ date, hour, location, ticketUrl }) {
               )}
             </div>
             )}
-      </div>
+      </section>
     </>
   )
 }

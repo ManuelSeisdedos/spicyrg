@@ -39,31 +39,35 @@ function ContactBox () {
 
   return (
     <>
-      <div className='ContactBox' id='contact'>
-        <h4 className='ContactBox-title'>CONTACTO</h4>
+      <section className='ContactBox' id='contact'>
+        <h3 className='ContactBox-title'>CONTACTO</h3>
         {/* ref={form} onSubmit={handleSubmit} */}
         <form className='ContactBox-form' action='' method='POST'>
-          <div className='ContactBox-inputs'>
-            <input
-              className='ContactBox-input'
-              type='text'
-              name='name'
-              id='name'
-              placeholder='Nombre Completo'
-              autoComplete='off'
-              required
-            />
-            <input
-              className='ContactBox-input'
-              type='email'
-              name='email'
-              id='email'
-              placeholder='@email.com'
-              autoComplete='off'
-              required
-            />
-          </div>
-          <div className='ContactBox-message'>
+          <fieldset className='ContactBox-inputs'>
+            <label aria-label='Nombre Completo'>
+              <input
+                className='ContactBox-input'
+                type='text'
+                name='name'
+                id='name'
+                placeholder='Nombre Completo'
+                autoComplete='off'
+                required
+              />
+            </label>
+            <label aria-label='@email.com'>
+              <input
+                className='ContactBox-input'
+                type='email'
+                name='email'
+                id='email'
+                placeholder='@email.com'
+                autoComplete='off'
+                required
+              />
+            </label>
+          </fieldset>
+          <fieldset className='ContactBox-message'>
             <textarea
               className='ContactBox-textarea'
               name='message'
@@ -73,7 +77,7 @@ function ContactBox () {
               placeholder='¡Déjanos tu mensaje acá!'
               required
             />
-          </div>
+          </fieldset>
           {/* <div className='ContactBox-reCaptcha'>
             <ReCAPTCHA sitekey={SITEKEY} onChange={handleChange} theme='dark' />
           </div> */}
@@ -84,14 +88,14 @@ function ContactBox () {
                   ? (<span className='ContactBox-notification ContactBox-notification--error'>¡Algo ha fallado al intentar enviar la consulta!</span>)
                   : (<span className='ContactBox-notification ContactBox-notification--succes'>¡Consulta enviada con éxito!</span>)}
           </div> */}
-          <div className='ContactBox-sendBtn'>
+          <menu className='ContactBox-sendBtn'>
             <Button
               text='Enviar'
               modifire='contactBoxSendBtn'
             />
-          </div>
+          </menu>
         </form>
-      </div>
+      </section>
     </>
   )
 }

@@ -6,6 +6,7 @@ const soundCloudData =
     uuid: uuidv4(),
     linkTo: 'https://on.soundcloud.com/CXvnS',
     img: soundCloudMIcon,
+    imgAlt: 'Icono de SoundCloud',
     isBlankInitialization: true,
     modifire: 'contact'
   }

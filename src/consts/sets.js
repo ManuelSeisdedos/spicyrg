@@ -22,4 +22,5 @@ const sets = [
     artistName: 'Spicy'
   }
 ]
+
 export { sets }
