@@ -18,6 +18,15 @@ const sets = [
     songImgAlt: 'Imagen del SET SPY 08',
     songName: 'SET SPY 08',
     artistName: 'Spicy'
+  },
+  {
+    uuid: uuidv4(),
+    songBackgroundImg: 'set09.webp',
+    songUrl: 'https://soundcloud.com/araceliriogonzalez/set-psy-09/',
+    songImgUrl: 'https://i1.sndcdn.com/artworks-a0mMfYBvnRdJ6XZc-Tev3Lw-t500x500.jpg',
+    songImgAlt: 'Imagen del SET SPY 09',
+    songName: 'SET SPY 09',
+    artistName: 'Spicy'
   }
 ]
 export { sets }
