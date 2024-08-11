@@ -1,5 +1,6 @@
 import set07 from '../assets/img/sets/set07.webp'
 import set08 from '../assets/img/sets/set08.webp'
+import set09 from '../assets/img/sets/set09.webp'
 import { v4 as uuidv4 } from 'uuid'
 
 const sets = [
@@ -23,7 +24,7 @@ const sets = [
   },
   {
     uuid: uuidv4(),
-    songBackgroundImg: 'set09.webp',
+    songBackgroundImg: set09,
     songUrl: 'https://soundcloud.com/araceliriogonzalez/set-psy-09/',
     songImgUrl: 'https://i1.sndcdn.com/artworks-a0mMfYBvnRdJ6XZc-Tev3Lw-t500x500.jpg',
     songImgAlt: 'Imagen del SET SPY 09',
