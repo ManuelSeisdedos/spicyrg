@@ -1,4 +1,8 @@
 import './AudioPlayer.css'
+import izReproductorIcon from '../../../assets/img/icons/izquierda-reproductor-icon.svg'
+import playIcon from '../../../assets/img/icons/play-icon.svg'
+import pauseIcon from '../../../assets/img/icons/pause-icon.svg'
+import deReproductorIcon from '../../../assets/img/icons/derecha-reproductor-icon.svg'
 import { memo, useMemo } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import ReactPlayer from 'react-player/soundcloud'
@@ -30,7 +34,7 @@ function AudioPlayer ({ songs }) {
   const btnsAudioPlayer = useMemo(() => [
     {
       uuid: uuidv4(),
-      img: 'src/assets/img/icons/izquierda-reproductor-icon.svg',
+      img: izReproductorIcon,
       imgAlt: 'Boton para ir a la anterior cancion',
       handleClick: handlePreviousSong,
       disabled: false,
@@ -38,7 +42,7 @@ function AudioPlayer ({ songs }) {
     },
     {
       uuid: uuidv4(),
-      img: !isPlaying ? 'src/assets/img/icons/play-icon.svg' : 'src/assets/img/icons/pause-icon.svg',
+      img: !isPlaying ? playIcon : pauseIcon,
       imgAlt: 'Boton para reproducir o pausar cancion',
       handleClick: handlePlaying,
       disabled: false,
@@ -46,7 +50,7 @@ function AudioPlayer ({ songs }) {
     },
     {
       uuid: uuidv4(),
-      img: 'src/assets/img/icons/derecha-reproductor-icon.svg',
+      img: deReproductorIcon,
       imgAlt: 'Boton para ir a la siguiente cancion',
       handleClick: handleNextSong,
       disabled: false,
@@ -76,9 +80,9 @@ function AudioPlayer ({ songs }) {
 
   return (
     <>
-      {songData && (
+      {songData && songData.songBackgroundImg && (
         <div
-          className='AudioPlayer' style={{ backgroundImage: `url('src/assets/img/sets/${songData.songBackgroundImg}')` }}
+          className='AudioPlayer' style={{ backgroundImage: `url(${songData.songBackgroundImg})` }}
         >
           <div className='AudioPlayer-container'>
             {onErrorCalled

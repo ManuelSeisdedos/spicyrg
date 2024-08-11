@@ -1,3 +1,4 @@
+import sideBarIcon from '../assets/img/icons/side-bar-icon.svg'
 import { v4 as uuidv4 } from 'uuid'
 
 const navItems = [
@@ -5,7 +6,7 @@ const navItems = [
     uuid: uuidv4(),
     linkTo: '#',
     text: 'Spicy',
-    img: 'src/assets/img/icons/side-bar-icon.svg',
+    img: sideBarIcon,
     imgAlt: 'Ají rojo',
     isBlankInitialization: false,
     modifire: 'aji'

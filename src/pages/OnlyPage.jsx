@@ -12,22 +12,22 @@ function OnlyPage () {
     <>
       <Header />
       <main className='Main'>
-        <section className='Main-banner' id='banner'>
+        <article className='Main-banner' id='banner'>
           <Banner
             slogan={slogan}
           />
-        </section>
-        <section className='Main-Sets' id='sets'>
+        </article>
+        <article className='Main-Sets' id='sets'>
           <Sets />
-        </section>
-        <section className='Main-events' id='events'>
+        </article>
+        <article className='Main-events' id='events'>
           <Events
             events={events}
           />
-        </section>
-        <section className='Main-gallery' id='gallery'>
+        </article>
+        <article className='Main-gallery' id='gallery'>
           <Gallery />
-        </section>
+        </article>
       </main>
       <Footer />
     </>
