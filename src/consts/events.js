@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 const events = [
   {
     uuid: uuidv4(),
-    date: 'AGO 26/24',
+    date: 'AGO 17/24',
     hour: '23:59hs',
     location: {
       adress: {
