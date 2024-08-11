@@ -1,4 +1,5 @@
 import './SideBar.css'
+import sideBarIcon from '../../../assets/img/icons/side-bar-icon.svg'
 import { useSideBar } from '../../../hooks/useSideBar.js'
 import { socialMediaItems } from '../../../consts/socialMediaItems.js'
 import Button from '../../core/Button/Button.jsx'
@@ -12,22 +13,23 @@ function SideBar ({ navItems }) {
   return (
     <>
       <div className='SideBar'>
-        <div className='SideBar-btnOpen'>
+        <menu className='SideBar-btnOpen'>
           <Button
-            img='src/assets/img/icons/side-bar-icon.svg'
+            img={sideBarIcon}
+            imgAlt='Ají rojo'
             handleClick={handleClick}
             modifire='sideBarBtnOpen'
           />
-        </div>
+        </menu>
         <div className={`SideBar-container ${!isOpen ? '' : 'is-open'}`}>
           <div className={`SideBar-subcontainer ${!isOpen ? '' : 'is-open'}`}>
-            <div className='SideBar-btnClose'>
+            <menu className='SideBar-btnClose'>
               <Button
-                img='src/assets/img/icons/side-bar-icon.svg'
+                img={sideBarIcon}
                 handleClick={handleClick}
                 modifire='sideBarBntClose'
               />
-            </div>
+            </menu>
             <div className='SideBar-nav'>
               <Nav
                 items={navItems}

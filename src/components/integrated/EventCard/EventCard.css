@@ -52,6 +52,10 @@
 .EventCard-item--info {
     font-family: var(--regular-font);
     font-size: 12px;
+    
+}
+.EventCard-list--info {
+    width: 190px;
 }
 .Button--eventCardLocationBtn {
     cursor: pointer;
@@ -92,6 +96,7 @@
         grid: auto / 110px 45px 120px;
         justify-items: center;
         gap: 30px;
+        width: max-content;
     }
     .EventCard-item--info p {
         width: 100%;
@@ -129,6 +134,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
     .EventCard-date {
         margin-bottom: 0;
@@ -139,6 +145,7 @@
         grid: auto / 130px 45px 130px;
         justify-items: center;
         gap: 30px;
+        width: max-content;
     }
     .EventCard-item--info p {
         width: 100%;

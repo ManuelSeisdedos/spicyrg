@@ -1,4 +1,5 @@
 import './Banner.css'
+import spicyLogo from '/spicy-logo.svg'
 import LinkTo from '../../core/LinkTo/LinkTo.jsx'
 import Logo from '../../core/Logo/Logo.jsx'
 
@@ -8,7 +9,7 @@ function Banner ({ slogan }) {
       <div className='Banner'>
         <div className='Banner-logoAndText'>
           <Logo
-            src='src\assets\img\spicy-logo.svg'
+            src={spicyLogo}
             alt='Spicy'
             modifire='banner'
           />

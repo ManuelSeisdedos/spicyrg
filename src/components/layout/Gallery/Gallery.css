@@ -38,7 +38,7 @@
             127px
         )
     );
-    max-width: 1000px;
+    
 }
 .LinkTo--galleryLinkToSocialMedia {
     display: flex;
@@ -69,12 +69,13 @@
 @media (min-width: 500px) {
     .UnorderedList--gallery {
         grid-template-columns: repeat(
-            3,
+            auto-fit,
             minmax(
                 216px,
                 216px
             )
         );
+        max-width: 800px;
     }
     .LinkTo-img--instagramPost {
         width: 216px;
