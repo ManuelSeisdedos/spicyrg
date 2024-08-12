@@ -46,7 +46,8 @@
 }
 @media (min-width: 500px) {
     .Banner {
-        height: 100dvh;
+        background-attachment: fixed;
+        height: calc(100dvh - 56px);
     }
     .Logo--banner { 
         width: 440px;
