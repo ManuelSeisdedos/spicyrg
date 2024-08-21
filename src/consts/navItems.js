@@ -32,13 +32,13 @@ const navItems = [
     isBlankInitialization: false,
     modifire: 'navLink'
   },
-  // {
-  //   uuid: uuidv4(),
-  //   linkTo: '#contact',
-  //   text: 'Contacto',
-  //   isBlankInitialization: false,
-  //   modifire: 'navLink'
-  // }
+  {
+    uuid: uuidv4(),
+    linkTo: '#contact',
+    text: 'Contacto',
+    isBlankInitialization: false,
+    modifire: 'navLink'
+  }
 ]
 
 export { navItems }

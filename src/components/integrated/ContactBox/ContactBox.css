@@ -75,6 +75,9 @@
 .Button--contactBoxSendBtn:active {
     color: var(--white-color);
 }
+.Button--contactBoxSendBtn[disabled]:active {
+    color: var(--soft-black-color);
+}
 .ContactBox-notificationBox {
     display: flex;
     justify-content: center;
@@ -85,8 +88,17 @@
 .ContactBox-notification {
     color: var(--light-mustard-color);
 }
+.ContactBox-small {
+    text-align: center;
+    width: 300px;
+    color: red;
+    margin-bottom: 1rem;
+}
 @media (min-width: 500px) {
     .Button--contactBoxSendBtn:hover {
         color: var(--white-color);
+    }
+    .Button--contactBoxSendBtn[disabled]:hover {
+        color: var(--soft-black-color);
     }
 }

@@ -21,7 +21,7 @@ function Footer () {
             )
           }
         </div>
-        {/* <ContactBox /> */}
+        <ContactBox />
       </footer>
     </>
   )

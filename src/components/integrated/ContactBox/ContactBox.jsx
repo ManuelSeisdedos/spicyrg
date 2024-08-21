@@ -52,6 +52,7 @@ function ContactBox () {
                 id='name'
                 placeholder='Nombre Completo'
                 autoComplete='off'
+                readOnly
                 required
               />
             </label>
@@ -63,6 +64,7 @@ function ContactBox () {
                 id='email'
                 placeholder='@email.com'
                 autoComplete='off'
+                readOnly
                 required
               />
             </label>
@@ -75,6 +77,7 @@ function ContactBox () {
               minLength={20}
               maxLength={340}
               placeholder='¡Déjanos tu mensaje acá!'
+              readOnly
               required
             />
           </fieldset>
@@ -88,10 +91,12 @@ function ContactBox () {
                   ? (<span className='ContactBox-notification ContactBox-notification--error'>¡Algo ha fallado al intentar enviar la consulta!</span>)
                   : (<span className='ContactBox-notification ContactBox-notification--succes'>¡Consulta enviada con éxito!</span>)}
           </div> */}
+          <small className='ContactBox-small'>El formulario de contacto estará deshabilitado temporalmente, disculpamos las molestias.</small>
           <menu className='ContactBox-sendBtn'>
             <Button
               text='Enviar'
               modifire='contactBoxSendBtn'
+              disabled
             />
           </menu>
         </form>
