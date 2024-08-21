@@ -1,0 +1,5 @@
+@media (min-width: 500px) {
+    .Main-events, .Main-gallery {
+        scroll-margin-top: 56px;
+    }
+}

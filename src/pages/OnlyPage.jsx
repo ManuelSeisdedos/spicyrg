@@ -1,3 +1,4 @@
+import './OnlyPage.css'
 import { slogan } from '../consts/slogan.js'
 import { events } from '../consts/events.js'
 import Header from '../components/layout/Header/Header.jsx'
@@ -17,7 +18,7 @@ function OnlyPage () {
             slogan={slogan}
           />
         </article>
-        <article className='Main-Sets' id='sets'>
+        <article className='Main-sets' id='sets'>
           <Sets />
         </article>
         <article className='Main-events' id='events'>
